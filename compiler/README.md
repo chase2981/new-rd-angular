@@ -1,4 +1,4 @@
-## @rd/compiler@2.x
+## @rd/compiler@4.x
 
 #### this module contains any front-end compilation related code
 

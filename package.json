@@ -4,17 +4,16 @@
   "license": "MIT",
   "scripts": {
     "build": "ng build --aot true",
-    "build-lib": "bash angular-lib/build.sh",
+    "build-lib": "cd angular-lib && bash build.sh",
     "build-common": "cd common && bash build.sh",
     "build-core": "cd core && bash build.sh",
     "e2e": "ng e2e",
-    "install-lib": "npm run build-lib && npm i angular-lib",
     "lint": "ng lint",
     "serve": "npm run build && lite-server -c=.bs-config.json",
     "ng": "ng",
     "start": "ng serve",
     "test": "ng test",
-    "test-lib": "bash angular-lib/test.sh"
+    "test-lib": "cd angular-lib && bash test.sh"
   },
   "private": false,
   "dependencies": {

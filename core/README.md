@@ -1,6 +1,6 @@
 <!--[![Build Status](https://travis-ci.org/ng2select/bootstrap.svg?branch=master)](https://travis-ci.org/ng2select/bootstrap)-->
 
-## @rd/core@2.x
+## @rd/core@6.x
 
 #### this module contains any javascript code that is essential to every application.
 it is reliant on the @angular/core, @angular/common modules. this module contains, but is not limited to, base classes, etc of which are core to any front-end javascript architecture.

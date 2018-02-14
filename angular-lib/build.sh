@@ -1,30 +1,34 @@
 #!/bin/bash
 
 # Declaration(s)
-GULP="node node_modules/.bin/gulp"
+GULP="node ../node_modules/.bin/gulp"
 # KARMA="node node_modules/.bin/karma"
-NGC="node node_modules/.bin/ngc"
+NGC="node ../node_modules/.bin/ngc"
 # ROLLUP="node node_modules/.bin/rollup"
 # TSC="node node_modules/.bin/tsc"
 
+echo $PWD
+
 # Clean up previous distributions
-rm -rf ./dist ./build
+rm -rf $PWD/dist $PWD/build
 
 # Run gulp inline-templates
-$GULP inline-templates --gulpfile ./.gulpfile.js
+$GULP inline-templates --gulpfile $PWD/.gulpfile.js
 
 # Run Typescript Compiler
-$NGC -p ./tsconfig.json
+$NGC -p $PWD/tsconfig.json
 
-# Copy library package.json
-cp package.json dist/package.json
-{ # try
 
-    command1 &&
-    #save your output
+# Copy library package.json + README.md, etc. to ./dist directory
+cp $PWD/package.json $PWD/dist/package.json
+cp $PWD/README.md $PWD/dist/README.md
 
-} || { # catch
-    # save log for exception 
-    set -e
-}
-
+# { # try
+#
+#     command1 &&
+#     #save your output
+#
+# } || { # catch
+#     # save log for exception
+#     set -e
+# }
