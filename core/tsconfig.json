@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "src",
+    "baseUrl": "build",
     "sourceMap": true,
     "declaration": true,
     "moduleResolution": "node",
@@ -23,7 +23,10 @@
     ]
   },
   "files": [
-    "./build/public_api.ts"
+    "./src/public_api.ts"
+  ],
+  "include": [
+    "./testing/index.ts"
   ],
   "exclude": [
     "node_modules/**",
