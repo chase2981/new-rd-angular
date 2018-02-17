@@ -46,6 +46,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/jquery": "^3.3.0",
     "@types/jssha": "0.0.29",
+    "@types/moment-range": "^3.0.5",
     "@types/node": "~6.0.60",
     "@types/toastr": "^2.1.35",
     "codelyzer": "4.0.1",
@@ -62,6 +63,10 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "1.0.4",
     "lite-server": "2.3.0",
+    "moment": "^2.20.1",
+    "moment-range": "^3.1.1",
+    "moment-timezone": "^0.5.14",
+    "pickmeup": "^3.1.1",
     "protractor": "~5.1.2",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
@@ -69,7 +74,6 @@
   },
   "optionalDependencies": {
     "@rd/core": "file:modules/core",
-    "@rd/common": "file:modules/common",
     "@turbonemesis/angular-lib": "file:modules/angular-lib"
   }
 }

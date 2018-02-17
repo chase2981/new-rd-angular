@@ -9,9 +9,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@angular/forms": ">= 2.0.0",
-    "@rd/core": "*"
-  },
-  "optionalDependencies": {
+    "@rd/core": ">= 6.0.0",
     "bootstrap": "3.x",
     "jquery": "2.x",
     "toastr": "2.x",
@@ -22,6 +20,5 @@
   "scripts": {},
   "directories": {},
   "readme": "readme.md",
-  "dependencies": {
-  }
+  "dependencies": {}
 }

@@ -3,7 +3,7 @@ import {
   OnChanges, SimpleChange, SimpleChanges
 } from '@angular/core';
 
-import { CoreApiSelectorFilter } from '../../core/shared/core-api-selector-filter';
+import { CoreApiSelectorFilter } from '@rd/core';
 import { ApiFilterDirective } from './api-filter.directive';
 
 @Directive({

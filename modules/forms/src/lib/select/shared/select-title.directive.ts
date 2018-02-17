@@ -1,6 +1,6 @@
 import { AfterViewInit, Directive, Input, Output, OnChanges, EventEmitter, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
 
-import { equals } from '../../../core';
+import { equals } from '@rd/core';
 
 import { Select } from './select';
 

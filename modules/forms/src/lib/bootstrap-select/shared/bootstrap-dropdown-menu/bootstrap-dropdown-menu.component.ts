@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { equals, isArray } from '../../../../core';
+import { equals, isArray } from '@rd/core';
 
 import { KENDO_DROPDOWN_ANIMATION } from '../../../shared';
 import { Select } from '../../../select';

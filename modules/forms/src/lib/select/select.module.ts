@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
-import { RdAngularCoreModule } from '../../core/core.module';
+import { RdAngularCoreModule } from '@rd/core';
 import { SelectDirective } from './select.directive';
 import {
   SelectToggleBtnDirective,

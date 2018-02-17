@@ -11,7 +11,9 @@
     "target": "es5",
     "skipLibCheck": false,
     "types": [
-      "jssha"
+      "ckeditor",
+      "jquery",
+      "node"
     ],
     "typeRoots": [
       "node_modules/@types"
@@ -26,7 +28,7 @@
     "./build/index.ts"
   ],
   "include": [
-    "./build/testing/index.ts"
+    "./build/typings.d.ts"
   ],
   "exclude": [
     "node_modules/**",

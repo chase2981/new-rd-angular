@@ -1,5 +1,5 @@
 import { EventEmitter } from '@angular/core';
-import { CoreApiSelectorFilter } from '../../core/shared/core-api-selector-filter';
+import { CoreApiSelectorFilter } from '@rd/core';
 
 export class ApiFilter {
     name: string;

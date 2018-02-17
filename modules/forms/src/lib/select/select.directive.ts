@@ -5,7 +5,7 @@ import {
 import { NgModel } from '@angular/forms';
 import { ReplaySubject } from 'rxjs/Rx';
 
-import { equals, isDefined } from '../../core';
+import { equals, isDefined } from '@rd/core';
 
 import { isBlur } from '../helpers';
 import { NgModelInput, NgModelInputValueAccessor } from '../ng-model-input';
@@ -19,14 +19,6 @@ var count = 1;
   providers: [new NgModelInputValueAccessor(SelectDirective)]
 })
 export class SelectDirective extends NgModelInput implements OnInit, Select {
-  /**
-   * @property toggleable: only applies when single-select, 
-   * refering to when an option is already active and
-   * a user clicks on it, whether or not the ngModel is set back to null
-   * when that happens (applicable to lead-card circle-select)
-   * @type {boolean}
-   * @memberof SelectDirective
-   */
   @Input() multiple?: boolean = false;
   @Input() nullable?: boolean = false;
   @Input() open: boolean = false;

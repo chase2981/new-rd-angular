@@ -25,7 +25,7 @@ import {
   SimpleChanges
 } from '@angular/core';
 
-import { extend } from '../../core';
+import { extend } from '@rd/core';
 import { NgModelInput, NgModelInputValueAccessor } from '../ng-model-input';
 
 @Directive({

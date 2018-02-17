@@ -5,7 +5,7 @@ GULP="node ../../node_modules/.bin/gulp"
 # KARMA="node node_modules/.bin/karma"
 NGC="node ../../node_modules/.bin/ngc"
 # ROLLUP="node node_modules/.bin/rollup"
-# TSC="node node_modules/.bin/tsc"
+TSC="node ../../node_modules/.bin/tsc"
 
 echo $PWD
 
@@ -16,7 +16,8 @@ rm -rf $PWD/dist $PWD/build
 $GULP inline-templates --gulpfile $PWD/gulpfile.js
 
 # Run Typescript Compiler
-$NGC -p $PWD/tsconfig.json
+$TSC -p $PWD/tsconfig.json
+# $NGC -p $PWD/tsconfig.json
 
 
 # Copy library package.json + README.md, etc. to ./dist directory

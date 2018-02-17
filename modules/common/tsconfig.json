@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "build",
+    "baseUrl": "./build",
     "sourceMap": true,
     "declaration": true,
     "moduleResolution": "node",
@@ -30,13 +30,16 @@
     "./build/index.ts"
   ],
   "include": [
-    "./build/testing/index.ts"
+
   ],
   "exclude": [
-    "node_modules/**",
+    "**/node_modules",
     "**/*.spec.ts"
   ],
   "angularCompilerOptions": {
+    "diagnostics": true,
+    "generateCodeForLibraries": false,
+    "genDir": "./dist",
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true

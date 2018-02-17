@@ -1,7 +1,7 @@
 import { AfterViewInit, Directive, ElementRef, Input, Output, OnChanges, OnDestroy, EventEmitter, SimpleChange, SimpleChanges } from '@angular/core';
 import * as moment from 'moment';
 
-import { extend } from '../../../core';
+import { extend } from '@rd/core';
 import { NgModelInput, NgModelInputValueAccessor } from '../../ng-model-input';
 
 @Directive({

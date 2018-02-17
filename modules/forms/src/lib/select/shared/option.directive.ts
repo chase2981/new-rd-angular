@@ -1,7 +1,6 @@
 import { Directive, Input, Output, EventEmitter, OnInit, HostBinding, HostListener } from '@angular/core';
 
-import { equals } from '../../../core';
-import { ImmutableService } from '../../../core/shared/immutable.service';
+import { equals, ImmutableService } from '@rd/core';
 import { Option } from './option';
 import { Select } from './select';
 

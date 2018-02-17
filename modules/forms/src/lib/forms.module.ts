@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RdAngularCoreModule } from '../core/core.module';
+import { RdAngularCoreModule } from '@rd/core';
 import { BootstrapSelectModule } from './bootstrap-select';
 import { BUTTON_GROUP_DIRECTIVES } from './button-group';
 import { DatepickerComponent, RangepickerComponent, DatepickerToggleButton, DatepickerQuickAccessButton, DropdownBuilderComponent, DatepickerComboSelectComponent } from './datepicker';
