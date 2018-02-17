@@ -5,8 +5,8 @@ import { UploadComponent } from '../../upload.component';
 
 @Component({
   selector: 'rd-upload-file-progress-bar',
-  template: require('./upload-file-progress-bar.component.html'),
-  styles: [require('./upload-file-progress-bar.component.less')]
+  templateUrl: './upload-file-progress-bar.component.html',
+  styleUrls: ['./upload-file-progress-bar.component.less'],
 })
 export class UploadFileProgressBarComponent implements OnInit {
 

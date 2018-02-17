@@ -4,8 +4,8 @@ import { ColorPickerComponent } from '../../color-picker.component';
 
 @Component({
   selector: '[rd-color-picker-color]',
-  template: require('./color-picker-color.component.html'),
-  styles: [require('./color-picker-color.component.less')]
+  templateUrl: './color-picker-color.component.html',
+  styleUrls: ['./color-picker-color.component.less'],
 })
 export class ColorPickerColorComponent {
   @HostBinding('style.backgroundColor') @Input() backgroundColor: string;

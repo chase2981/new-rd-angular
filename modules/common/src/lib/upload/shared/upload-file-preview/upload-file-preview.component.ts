@@ -7,7 +7,7 @@ import { UploadComponent } from '../../upload.component';
 @Component({
     selector: 'rd-upload-file-preview, [rd-upload-file-preview]',
     template: `<canvas></canvas>`,
-    styles: [require('./upload-file-preview.component.less')],
+    styleUrls: ['./upload-file-preview.component.less'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UploadFilePreviewComponent implements OnInit, DoCheck, OnDestroy {

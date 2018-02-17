@@ -4,8 +4,8 @@ import { Select } from '../select';
 
 @Component({
   selector: 'rd-bootstrap-select',
-  template: require('./bootstrap-select.component.html'),
-  styles: [require('./bootstrap-select.component.less')]
+  templateUrl: './bootstrap-select.component.html',
+  styleUrls: ['./bootstrap-select.component.less'],
 })
 export class BootstrapSelectComponent implements OnInit {
   @Input() btnClass: string = 'btn-default';

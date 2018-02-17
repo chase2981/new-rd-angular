@@ -5,8 +5,8 @@ import { ModalComponent } from '../modal.component';
 
 @Component({
   selector: 'rd-bootstrap-modal',
-  template: require('./bootstrap-modal.component.html'),
-  styles: [require('./bootstrap-modal.component.less')]
+  templateUrl: './bootstrap-modal.component.html',
+  styleUrls: ['./bootstrap-modal.component.less'],
 })
 export class BootstrapModalComponent implements OnInit, Modal {
   @Input() options: any = {};

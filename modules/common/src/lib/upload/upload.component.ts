@@ -4,8 +4,8 @@ import { FileUploader } from 'ng2-file-upload';
 
 @Component({
     selector: 'rd-upload, [rd-upload]',
-    template: require('./upload.component.html'),
-    styles: [require('./upload.component.less')]
+    templateUrl: './upload.component.html',
+    styleUrls: ['./upload.component.less'],
 })
 export class UploadComponent implements OnInit, OnDestroy {
     @Input() url: string = '';

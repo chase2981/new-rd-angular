@@ -5,8 +5,8 @@ import { TabComponent } from '../tab';
 
 @Component({
   selector: 'rd-tab-nav',
-  template: require('./tab-nav.component.html'),
-  styles: [require('./tab-nav.component.less')]
+  templateUrl: './tab-nav.component.html',
+  styleUrls: ['./tab-nav.component.less'],
 })
 export class TabNavComponent implements OnInit {
 

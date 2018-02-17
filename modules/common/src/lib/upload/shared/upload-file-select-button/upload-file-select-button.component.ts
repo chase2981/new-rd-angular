@@ -8,7 +8,7 @@ import { UploadComponent } from '../../upload.component';
   template: `
     <input type="file" ng2FileSelect [uploader]="uploadComponent.uploader" [attr.multiple]="multiple" /><br/>
   `,
-  styles: [require('./upload-file-select-button.component.less')]
+  styleUrls: ['./upload-file-select-button.component.less'],
 })
 export class UploadFileSelectButtonComponent implements OnInit {
   @Input() multiple: boolean;

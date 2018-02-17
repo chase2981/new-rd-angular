@@ -11,7 +11,7 @@ import { UploadComponent } from '../../upload.component';
       <span class="glyphicon glyphicon-upload"></span> Upload all
   </button>
   `,
-  styles: [require('./upload-file-submit-button.component.less')]
+  styleUrls: ['./upload-file-submit-button.component.less'],
 })
 export class UploadFileSubmitButtonComponent implements OnInit {
 

@@ -7,8 +7,8 @@ import { UploadFilePreviewComponent } from '../upload-file-preview/upload-file-p
 
 @Component({
   selector: 'rd-upload-file-queue',
-  template: require('./upload-file-queue.component.html'),
-  styles: [require('./upload-file-queue.component.less')]
+  templateUrl: './upload-file-queue.component.html',
+  styleUrls: ['./upload-file-queue.component.less'],
 })
 export class UploadFileQueueComponent implements OnInit {
 

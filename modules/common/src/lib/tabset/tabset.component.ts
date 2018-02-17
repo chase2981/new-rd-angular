@@ -5,8 +5,8 @@ import { TabNavComponent } from './tab-nav';
 
 @Component({
     selector: 'rd-tabset',
-    template: require('./tabset.component.html'),
-    styles: [require('./tabset.component.less')]
+    templateUrl: './tabset.component.html',
+    styleUrls: ['./tabset.component.less'],
 })
 export class TabsetComponent implements OnInit {
     @Output() selected = new EventEmitter();

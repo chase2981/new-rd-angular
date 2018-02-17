@@ -21,7 +21,7 @@ import { UploadComponent } from '../../upload.component';
       <ng-content></ng-content>
   </div>
   `,
-  styles: [require('./upload-file-drop-zone.component.less')]
+  styleUrls: ['./upload-file-drop-zone.component.less'],
 })
 export class UploadFileDropZoneComponent implements OnInit, UploadChildComponent {
 

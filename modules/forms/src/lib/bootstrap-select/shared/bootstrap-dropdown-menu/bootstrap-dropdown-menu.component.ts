@@ -8,8 +8,8 @@ import { Option } from '../../../select/shared';
 
 @Component({
   selector: 'rd-bootstrap-dropdown-menu',
-  template: require('./bootstrap-dropdown-menu.component.html'),
-  styles: [require('./bootstrap-dropdown-menu.component.less')],
+  templateUrl: './bootstrap-dropdown-menu.component.html',
+  styleUrls: ['./bootstrap-dropdown-menu.component.less'],
   animations: [
     KENDO_DROPDOWN_ANIMATION
   ]

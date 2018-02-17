@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output, SimpleChange, SimpleChan
 
 @Component({
 	selector: 'rd-bootstrap-filter',
-	template: require('./bootstrap-filter.component.html'),
+	templateUrl: './bootstrap-filter.component.html',
 })
 export class BootstrapFilterComponent implements OnInit {
 	@Input() list: any[] = [];

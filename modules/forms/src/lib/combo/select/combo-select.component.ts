@@ -7,8 +7,8 @@ import { KEYCODE, SelectOption } from '../../shared';
 
 @Component({
   selector: 'rd-combo-select',
-  template: require('./combo-select.component.html'),
-  styles: [require('./combo-select.component.less')],
+  templateUrl: './combo-select.component.html',
+  styleUrls: ['./combo-select.component.less'],
   providers: [new NgModelInputValueAccessor(ComboSelectComponent)]
 })
 export class ComboSelectComponent extends ComboSelect implements OnInit, OnDestroy {

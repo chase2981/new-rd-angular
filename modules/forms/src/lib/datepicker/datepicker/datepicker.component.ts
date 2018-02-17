@@ -29,8 +29,8 @@ import { DatepickerHelper, DatepickerQuickAccessButton, DATE_TYPE_ENUM } from '.
 
 @Component({
     selector: 'rd-datepicker',
-    template: require('./datepicker.component.html'),
-    styles: [require('./datepicker.component.less')],
+    templateUrl: './datepicker.component.html',
+    styleUrls: ['./datepicker.component.less'],
     providers: [new NgModelInputValueAccessor(DatepickerComponent)]
 })
 export class DatepickerComponent extends DatepickerHelper implements OnInit, AfterContentInit, AfterViewInit, OnDestroy {

@@ -7,8 +7,8 @@ declare var moment: any;
 
 @Component({
   selector: 'rd-timepicker-combo-select',
-  template: require('./timepicker-combo-select.component.html'),
-  styles: [require('./timepicker-combo-select.component.less')],
+  templateUrl: './timepicker-combo-select.component.html',
+  styleUrls: ['./timepicker-combo-select.component.less'],
   encapsulation: ViewEncapsulation.None,
   providers: [new NgModelInputValueAccessor(TimePickerComboSelectComponent)]
 })

@@ -2,8 +2,8 @@ import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'rd-loading-indicator',
-  template: require('./loading-indicator.component.html'),
-  styles: [require('./loading-indicator.component.less')]
+  templateUrl: './loading-indicator.component.html',
+  styleUrls: ['./loading-indicator.component.less'],
 })
 export class LoadingIndicatorComponent implements OnInit, OnDestroy {
   @Input() height: any = 75;

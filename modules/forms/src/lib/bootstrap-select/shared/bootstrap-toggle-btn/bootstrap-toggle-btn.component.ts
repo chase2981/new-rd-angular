@@ -4,8 +4,8 @@ import { Select } from '../../../select';
 
 @Component({
   selector: 'rd-bootstrap-toggle-btn',
-  template: require('./bootstrap-toggle-btn.component.html'),
-  styles: [require('./bootstrap-toggle-btn.component.less')]
+  templateUrl: './bootstrap-toggle-btn.component.html',
+  styleUrls: ['./bootstrap-toggle-btn.component.less'],
 })
 export class BootstrapToggleBtnComponent implements OnInit {
   @Input() select: Select;

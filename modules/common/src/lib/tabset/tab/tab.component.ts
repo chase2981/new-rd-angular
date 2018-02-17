@@ -19,8 +19,8 @@ import { TabNavComponent } from '../tab-nav';
 
 @Component({
   selector: 'rd-tab',
-  template: require('./tab.component.html'),
-  styles: [require('./tab.component.less')]
+  templateUrl: './tab.component.html',
+  styleUrls: ['./tab.component.less'],
 })
 export class TabComponent implements OnInit, OnDestroy {
   @Input() title: string;

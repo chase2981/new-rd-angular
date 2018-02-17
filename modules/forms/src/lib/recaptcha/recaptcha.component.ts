@@ -2,8 +2,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'rd-recaptcha',
-  template: require('./recaptcha.component.html'),
-  styles: [require('./recaptcha.component.less')]
+  templateUrl: './recaptcha.component.html',
+  styleUrls: ['./recaptcha.component.less'],
 })
 export class RecaptchaComponent implements OnInit {
 

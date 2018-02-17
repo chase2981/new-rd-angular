@@ -4,8 +4,8 @@ import { SimpleSortDirective } from '../simple-sort.directive';
 
 @Component({
   selector: '[rd-simple-sort-field]',
-  template: require('./simple-sort-field.component.html'),
-  styles: [require('./simple-sort-field.component.less')]
+  templateUrl: './simple-sort-field.component.html',
+  styleUrls: ['./simple-sort-field.component.less'],
 })
 
 export class SimpleSortFieldComponent {

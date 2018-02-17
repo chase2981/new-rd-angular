@@ -5,8 +5,8 @@ import { NgModelInput } from '../../ng-model-input';
 
 @Component({
     selector: 'rd-select-builder',
-    template: require('./select-builder.component.html'),
-    styles: [require('./select-builder.component.less')],
+    templateUrl: './select-builder.component.html',
+    styleUrls: ['./select-builder.component.less'],
     host: {
         '(window:click)': 'onWindowClick($event)',
         //'[window:height]': 'windowHeight'

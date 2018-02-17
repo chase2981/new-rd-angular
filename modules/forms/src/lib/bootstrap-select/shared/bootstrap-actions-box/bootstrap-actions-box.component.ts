@@ -4,8 +4,8 @@ import { Select } from '../../../select';
 
 @Component({
   selector: 'rd-bootstrap-actions-box',
-  template: require('./bootstrap-actions-box.component.html'),
-  styles: [require('./bootstrap-actions-box.component.less')]
+  templateUrl: './bootstrap-actions-box.component.html',
+  styleUrls: ['./bootstrap-actions-box.component.less'],
 })
 export class BootstrapActionsBoxComponent implements OnInit {
   @Input() select: Select;

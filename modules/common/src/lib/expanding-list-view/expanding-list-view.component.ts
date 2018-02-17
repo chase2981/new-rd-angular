@@ -2,8 +2,8 @@ import { Component, Input, OnInit, Output, EventEmitter, HostBinding } from '@an
 
 @Component({
   selector: 'rd-expanding-list-view',
-  template: require('./expanding-list-view.component.html'),
-  styles: [require('./expanding-list-view.component.less')]
+  templateUrl: './expanding-list-view.component.html',
+  styleUrls: ['./expanding-list-view.component.less'],
 })
 export class ExpandingListViewComponent implements OnInit {
   @HostBinding('class.active') @Input() open: boolean = false;

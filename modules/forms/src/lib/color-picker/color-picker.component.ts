@@ -5,8 +5,8 @@ import { Color } from './shared';
 
 @Component({
     selector: 'rd-color-picker',
-    template: require('./color-picker.component.html'),
-    styles: [require('./color-picker.component.less')],
+    templateUrl: './color-picker.component.html',
+    styleUrls: ['./color-picker.component.less'],
     providers: [new NgModelInputValueAccessor(ColorPickerComponent)]
 })
 export class ColorPickerComponent extends NgModelInput implements OnInit {

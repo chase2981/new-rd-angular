@@ -9,8 +9,8 @@ import { DATE_TYPE_ENUM } from "../shared/date-type.enum";
 
 @Component({
   selector: 'rd-datepicker-combo-select',
-  template: require('./datepicker-combo-select.component.html'),
-  styles: [require('./datepicker-combo-select.component.less')],
+  templateUrl: './datepicker-combo-select.component.html',
+  styleUrls: ['./datepicker-combo-select.component.less'],
   providers: [new NgModelInputValueAccessor(DatepickerComboSelectComponent)],
   encapsulation: ViewEncapsulation.Emulated,
 })

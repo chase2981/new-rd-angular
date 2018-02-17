@@ -2,8 +2,8 @@ import { Component, Directive, Input, OnInit, Output, ElementRef, EventEmitter, 
 
 @Component({
     selector: 'rd-dropdown-builder',
-    template: require('./dropdown-builder.component.html'),
-    styles: [require('./dropdown-builder.component.less')],
+    templateUrl: './dropdown-builder.component.html',
+    styleUrls: ['./dropdown-builder.component.less'],
     host: { '(window:click)': 'onWindowClick($event)' },
 })
 export class DropdownBuilderComponent implements OnInit {
