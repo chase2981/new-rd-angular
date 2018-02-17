@@ -1,0 +1,40 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "build",
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "skipLibCheck": false,
+    "types": [
+      "jssha"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2016",
+      "dom",
+      "es2015"
+    ]
+  },
+  "files": [
+    "./build/index.ts"
+  ],
+  "include": [
+    "./build/testing/index.ts"
+  ],
+  "exclude": [
+    "node_modules/**",
+    "**/*.spec.ts"
+  ],
+  "angularCompilerOptions": {
+    "annotateForClosureCompiler": true,
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true
+  }
+}

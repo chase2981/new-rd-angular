@@ -1,0 +1,27 @@
+{
+  "name": "@rd/forms",
+  "version": "4.0.0",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "author": {
+    "name": "rd"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/forms": ">= 2.0.0",
+    "@rd/core": "*"
+  },
+  "optionalDependencies": {
+    "bootstrap": "3.x",
+    "jquery": "2.x",
+    "toastr": "2.x",
+    "pickmeup": "2.9.1",
+    "moment": "2.18.1",
+    "ckeditor": "4.x"
+  },
+  "scripts": {},
+  "directories": {},
+  "readme": "readme.md",
+  "dependencies": {
+  }
+}
