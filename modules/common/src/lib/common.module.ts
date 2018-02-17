@@ -9,8 +9,13 @@ import { RdAngularCoreModule } from '@rd/core';
 import { ExpandingListViewComponent } from './expanding-list-view';
 import { TelephonePipe } from './pipes';
 import { TabComponent, TabNavComponent, TabsetComponent } from './tabset';
-import { UPLOAD_DIRECTIVES } from './upload';
-import { MODAL_DIRECTIVES, BOOTSTRAP_MODAL_DIRECTIVES } from './modal';
+import {   UploadComponent,
+  UploadFileQueueComponent, UploadFilePreviewComponent, UploadFileDropZoneComponent,
+  UploadFileProgressBarComponent, UploadFileSelectButtonComponent, UploadFileSubmitButtonComponent
+ } from './upload';
+import { ModalComponent, ModalShowButton, ModalHideButton, ModalToggleButton,
+  BootstrapModalComponent
+} from './modal';
 import { LoadingIndicatorComponent } from './loading-indicator';
 import { SimpleSortModule } from './simple-sort';
 import { Toast } from './toast';
@@ -20,11 +25,16 @@ import { IFrameModule } from './iframe/iframe.module'
 @NgModule({
     declarations: [
         ExpandingListViewComponent,
-        BOOTSTRAP_MODAL_DIRECTIVES,
-        MODAL_DIRECTIVES,
+        BootstrapModalComponent, ModalShowButton, ModalHideButton,
+        ModalToggleButton,
+        ModalComponent, ModalShowButton, ModalHideButton, ModalToggleButton,
         TelephonePipe,
         TabComponent, TabNavComponent, TabsetComponent,
-        UPLOAD_DIRECTIVES,
+        UploadComponent,
+        UploadFileQueueComponent, UploadFilePreviewComponent,
+        UploadFileDropZoneComponent,
+        UploadFileProgressBarComponent, UploadFileSelectButtonComponent,
+        UploadFileSubmitButtonComponent,
         LoadingIndicatorComponent,
     ],
     imports: [
@@ -37,11 +47,13 @@ import { IFrameModule } from './iframe/iframe.module'
     ],
     exports: [
         ExpandingListViewComponent,
-        BOOTSTRAP_MODAL_DIRECTIVES,
-        MODAL_DIRECTIVES,
         TelephonePipe,
         TabComponent, TabNavComponent, TabsetComponent,
-        UPLOAD_DIRECTIVES,
+        UploadComponent,
+        UploadFileQueueComponent, UploadFilePreviewComponent,
+        UploadFileDropZoneComponent,
+        UploadFileProgressBarComponent, UploadFileSelectButtonComponent,
+        UploadFileSubmitButtonComponent,
         LoadingIndicatorComponent,
         SimpleSortModule,
         FullcalendarModule,

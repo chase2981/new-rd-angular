@@ -1,8 +1,8 @@
 {
   "name": "@rd/forms",
-  "version": "4.2.0",
-  "main": "forms.umd.min.js",
-  "typings": "index.d.ts",
+  "version": "4.2.1",
+  "main": "bundles/forms.umd.min.js",
+  "typings": "forms.d.ts",
   "author": {
     "name": "rd"
   },
@@ -19,6 +19,6 @@
   },
   "scripts": {},
   "directories": {},
-  "readme": "readme.md",
+  "readme": "README.md",
   "dependencies": {}
 }
