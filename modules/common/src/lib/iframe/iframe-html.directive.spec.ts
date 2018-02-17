@@ -11,13 +11,13 @@ import {
   async, inject
 } from '@angular/core/testing';
 
-import { CoreApiService } from '../../core';
-import { CoreApiServiceMock } from '../../core/testing';
+import { CoreApiService } from '@rd/core';
+import { CoreApiServiceMock } from '@rd/core/testing';
 
 import { IFrameModule } from './iframe.module';
 import { IframeHtmlDirective } from './iframe-html.directive';
 
-describe('Directive: IframeHtml', () => { 
+describe('Directive: IframeHtml', () => {
   // simple style
   beforeEach(() => {
     TestBed.configureTestingModule({
