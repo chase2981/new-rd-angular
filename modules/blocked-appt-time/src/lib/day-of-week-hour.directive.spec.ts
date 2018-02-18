@@ -9,11 +9,11 @@ import {
   async, inject
 } from '@angular/core/testing';
 
-import { CoreApiService, ImmutableService } from '../shared';
-import { CoreApiServiceMock } from '../testing';
-import { OrderByModule } from '../order-by';
+import { CoreApiService, ImmutableService } from '@rd/core';
+import { CoreApiServiceMock } from '@rd/core/testing';
+import { OrderByModule } from '@rd/core/order-by';
 
-import { RdAngularCoreModule } from '../core.module';
+import { RdAngularBlockedApptTimeModule } from './blocked-appt-time.module';
 import { DayOfWeekHourDirective } from './day-of-week-hour.directive';
 
 let component: MockWrapperComponent;
@@ -32,8 +32,7 @@ describe('Directive: DayOfWeekHour', () => {
         MockWrapperComponent
       ],
       imports: [
-        RdAngularCoreModule,
-        OrderByModule,
+        RdAngularBlockedApptTimeModule,
       ],
       providers: [
         { provide: CoreApiService, useValue: CoreApiServiceMock },

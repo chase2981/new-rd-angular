@@ -84,6 +84,7 @@
   },
   "optionalDependencies": {
     "@turbonemesis/angular-lib": "file:modules/angular-lib/dist",
-    "@rd/core": "file:modules/core/dist"
+    "@rd/core": "file:modules/core/dist",
+    "@rd/forms": "file:modules/forms/dist"
   }
 }

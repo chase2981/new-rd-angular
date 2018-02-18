@@ -2,8 +2,7 @@ import { ChangeDetectorRef, Directive, Input, OnInit, Output, EventEmitter } fro
 import { Subscription } from 'rxjs/Rx';
 import * as moment from 'moment';
 
-import { CoreApiService } from '../shared';
-import { OrderByService } from '../order-by';
+import { CoreApiService, OrderByService } from '@rd/core';
 import { BlockedApptTime, DayOfWeekHour } from './shared';
 
 @Directive({

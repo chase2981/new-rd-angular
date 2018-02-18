@@ -3,7 +3,7 @@ import { NgModel } from '@angular/forms';
 import * as moment from 'moment';
 import { Subscription } from 'rxjs/Rx';
 
-import { CoreApiService } from '../shared';
+import { CoreApiService } from '@rd/core';
 import { DayOfWeekHour } from './shared';
 
 @Directive({

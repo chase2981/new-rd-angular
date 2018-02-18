@@ -9,10 +9,10 @@ import {
   async, inject
 } from '@angular/core/testing';
 
-import { CoreApiService, ImmutableService } from '../../core';
-import { CoreApiServiceMock } from '../../core/testing';
+import { CoreApiService, ImmutableService } from '@rd/core';
+import { CoreApiServiceMock } from '@rd/core/testing';
 
-import { RdAngularFormsModule } from '../../forms/forms.module';
+import { RdAngularFormsModule } from '@rd/forms';
 import { RdAngularCoreModule } from '../core.module';
 import { OneTimeBlockedApptDirective } from './one-time-blocked-appt.directive';
 import { BlockedApptTimeDirective } from './blocked-appt-time.directive';

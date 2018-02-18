@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { RdAngularCoreModule } from '@rd/core';
+import { RdAngularFormsModule } from '@rd/forms';
 
 import {
     OneTimeBlockedApptDirective,
@@ -13,7 +14,9 @@ import {
 
 @NgModule({
     imports: [
+        CommonModule,
         RdAngularCoreModule,
+        RdAngularFormsModule,
     ],
     declarations: [
       OneTimeBlockedApptDirective,
@@ -27,6 +30,7 @@ import {
       DayOfWeekHourDirective,
       RecurringBlockedApptDirective,
       RdAngularCoreModule,
+      RdAngularFormsModule,
     ],
     providers: [
 

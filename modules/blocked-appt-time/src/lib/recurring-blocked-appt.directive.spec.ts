@@ -10,12 +10,11 @@ import {
   async, inject
 } from '@angular/core/testing';
 
-import { CoreApiService } from '../shared';
-import { CoreApiServiceMock } from '../testing';
-import { OrderByModule } from '../order-by';
+import { CoreApiService } from '@rd/core';
+import { CoreApiServiceMock } from '@rd/core/testing';
+import { OrderByModule } from '@rd/core';
 
-import { RdAngularCoreModule } from '../core.module';
-import { RdAngularFormsModule } from '../../forms/forms.module';
+import { RdAngularCoreModule } from './blocked-appt-time.module';
 import { RecurringBlockedApptDirective } from './recurring-blocked-appt.directive';
 import { BlockedApptTimeDirective } from './blocked-appt-time.directive';
 import { DayOfWeekHourDirective } from './day-of-week-hour.directive';
@@ -143,13 +142,13 @@ describe('Directive: RecurringBlockedAppt', () => {
                 </div>
               </div>
             </div>
-          
+
             <div *ngIf="!blockedApptTime?.visible" class="btn btn-link" (click)="blockedApptTime.visible = true">Add</div>
-        
+
         </div>
     </div>
   </div>
-</div> 
+</div>
 
 
     </div>

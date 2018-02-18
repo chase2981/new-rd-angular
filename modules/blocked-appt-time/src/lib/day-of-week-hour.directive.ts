@@ -2,8 +2,8 @@ import { ChangeDetectorRef, Directive, Input, OnInit, Output, EventEmitter } fro
 import { ControlValueAccessor } from '@angular/forms';
 import { Subscription } from 'rxjs/Rx';
 
-import { NgModelInputValueAccessor } from '../../forms/ng-model-input';
-import { CoreApiService } from '../shared';
+import { NgModelInputValueAccessor } from '@rd/forms';
+import { CoreApiService } from '@rd/core';
 import { DayOfWeekHour, DayOfWeekHourModel } from './shared';
 
 @Directive({

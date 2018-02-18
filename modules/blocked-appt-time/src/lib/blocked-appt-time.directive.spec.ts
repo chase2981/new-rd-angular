@@ -9,11 +9,10 @@ import {
   async, inject
 } from '@angular/core/testing';
 
-import { CoreApiService, ImmutableService } from '../../core';
-import { CoreApiServiceMock } from '../../core/testing';
-import { OrderByModule } from '../order-by';
+import { CoreApiService, ImmutableService } from '@rd/core';
+import { CoreApiServiceMock } from '@rd/core/testing';
 
-import { RdAngularCoreModule } from '../core.module';
+import { RdAngularBlockedApptTimeModule } from './blocked-appt-time.module';
 import { BlockedApptTimeDirective } from './blocked-appt-time.directive';
 
 let component: MockWrapperComponent;
@@ -32,8 +31,7 @@ describe('Directive: BlockedApptTime', () => {
         MockWrapperComponent
       ],
       imports: [
-        RdAngularCoreModule,
-        OrderByModule,
+        RdAngularBlockedApptTimeModule,
       ],
       providers: [
         { provide: CoreApiService, useValue: CoreApiServiceMock },

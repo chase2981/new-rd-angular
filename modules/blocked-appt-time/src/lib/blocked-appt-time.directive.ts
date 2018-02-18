@@ -3,9 +3,9 @@ import { ControlValueAccessor } from '@angular/forms';
 import { Subscription } from 'rxjs/Rx';
 import * as moment from 'moment';
 
-import { NgModelInputValueAccessor, NgModelInput } from '../../forms/ng-model-input';
-import { CoreApiService } from '../shared';
-import { isDefined } from '../helpers';
+import { NgModelInputValueAccessor, NgModelInput } from '@rd/forms';
+import { CoreApiService } from '@rd/core';
+import { isDefined } from '@rd/core';
 import { BlockedApptTime, BlockedApptTimeModel, DayOfWeekHourModel } from './shared';
 
 @Directive({
