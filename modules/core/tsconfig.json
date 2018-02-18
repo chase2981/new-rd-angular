@@ -30,17 +30,19 @@
     "./build/core.ts"
   ],
   "include": [
+    "./build/testing/**/*.ts",
     "**/*.d.ts"
   ],
   "exclude": [
     "**/node_modules",
     "**/*.spec.ts"
   ],
+  "paths": {
+    "/testing": "src/testing"
+  },
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": true,
-    "flatModuleOutFile": "./core.umd.js",
-    "flatModuleId": "@rd/core"
+    "skipTemplateCodegen": true
   }
 }

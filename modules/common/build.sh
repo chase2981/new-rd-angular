@@ -2,7 +2,7 @@
 
 # Declaration(s)
 GULP="node ../../node_modules/.bin/gulp"
-# KARMA="node node_modules/.bin/karma"
+KARMA="node ../../node_modules/.bin/karma"
 NGC="node ../../node_modules/.bin/ngc"
 ROLLUP="node ../../node_modules/.bin/rollup"
 # TSC="node node_modules/.bin/tsc"

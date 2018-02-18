@@ -11,11 +11,14 @@
     "skipLibCheck": true,
     "rootDir": "./build",
     "baseUrl": ".",
-    "outDir": "./dist",
+    "outDir": "./specs",
     "types": [
-      "node",
       "jasmine",
-      "ckeditor"
+      "node",
+      "bootstrap",
+      "fullcalendar",
+      "jquery",
+      "toastr"
     ],
     "typeRoots": [
       "node_modules/@types"
@@ -26,9 +29,13 @@
       "es2015"
     ]
   },
+  "files": [
+    "./build/common.ts"
+  ],
   "include": [
-    "./build/**/*",
-    "**/*.d.ts"
+    "./build/browser-test-shim.ts",
+    "./build/**/*.d.ts",
+    "./build/**/*.spec.ts"
   ],
   "exclude": [
     "**/node_modules"
@@ -36,6 +43,8 @@
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": true
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "index.js",
+    "flatModuleId": "@turbonemesis/angular-lib-tests"
   }
 }
