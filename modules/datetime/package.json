@@ -1,22 +1,23 @@
 {
   "name": "@rd/datetime",
-  "version": "2.0.0",
-  "main": "index.js",
-  "typings": "index.d.ts",
+  "version": "1.0.0",
+  "main": "datetime.umd.min.js",
+  "typings": "datetime.d.ts",
   "author": {
     "name": "rd"
   },
   "license": "MIT",
   "peerDependencies": {
-    "@rd/core": "2.x"
-  },
-  "optionalDependencies": {
+    "@rd/core": ">= 6.0.0",
+    "@angular/core": ">= 5.0.0",
+    "@angular/common": ">= 5.0.0",
+    "rxjs": ">= 5.0.0",
     "moment": "2.x",
     "moment-range": "2.x",
     "moment-timezone": "0.x"
   },
-  "engines" : { "npm" : ">= 3.0.0", "node" : ">=4.0.0" },
+  "engines" : { "npm" : ">= 5.0.0", "node" : ">=7.0.0" },
   "scripts": {},
   "directories": {},
-  "readme": "readme.md"
+  "readme": "README.md"
 }

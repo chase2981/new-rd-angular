@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 
-import { CoreApiService } from '../../shared';
+import { CoreApiService } from '@rd/core';
 
 import { MomentFormat } from './moment-format';
 
@@ -25,7 +25,7 @@ export class TimezoneService implements MomentFormat {
   getAccountTimezone(accountId: number) {
     if (!accountId)
       return Observable.of([]);
-      
+
     if (!this.communityGroupTimezone$[accountId])
       this.communityGroupTimezone$[accountId] = this.coreApiSvc.get(`/communityGroups?filters=textmsgit_account=${accountId}&include=client,timeZoneType`)
         .catch((err: any, caught: Observable<any>) => Observable.of([]))

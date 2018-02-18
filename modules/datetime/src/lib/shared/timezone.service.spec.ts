@@ -2,8 +2,8 @@
 
 import { TestBed, async, inject } from '@angular/core/testing';
 
-import { CoreApiService } from '../../shared';
-import { CoreApiServiceMock } from '../../testing';
+import { CoreApiService } from '@rd/core';
+import { CoreApiServiceMock } from '@rd/core/testing';
 
 import { TimezoneService } from './timezone.service';
 
