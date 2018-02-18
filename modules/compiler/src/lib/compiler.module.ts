@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { BrowserModule } from '@angular/platform-browser';
 import { CompilerConfig, AotCompiler, JitCompiler, JitSummaryResolver,
-     templateJitUrl, ngModuleJitUrl, sharedStylesheetJitUrl, splitClasses, 
+     templateJitUrl, ngModuleJitUrl, sharedStylesheetJitUrl, splitClasses,
      splitNsName, createAotCompiler, createAotUrlResolver, core } from '@angular/compiler';
 
 import { DynamicCompilerModule } from './dynamic-compiler.module';

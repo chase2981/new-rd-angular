@@ -2,14 +2,21 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "src",
+    "baseUrl": "build",
     "sourceMap": true,
     "declaration": true,
+    "module": "umd",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
     "skipLibCheck": false,
+    "types": [
+      "bootstrap",
+      "fullcalendar",
+      "jquery",
+      "toastr"
+    ],
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -20,15 +27,20 @@
     ]
   },
   "files": [
-    "./build/public_api.ts"
+    "./build/compiler.ts"
+  ],
+  "include": [
+    "**/*.d.ts"
   ],
   "exclude": [
-    "node_modules/**",
+    "**/node_modules",
     "**/*.spec.ts"
   ],
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": true
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "./compiler.umd.js",
+    "flatModuleId": "@rd/compiler"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@rd/sms",
-  "version": "2.0.1",
+  "version": "1.0.0",
   "main": "sms.umd.min.js",
   "typings": "sms.d.ts",
   "author": {
@@ -9,7 +9,10 @@
   "license": "MIT",
   "peerDependencies": {
     "@angular/core": ">= 5.0.0",
+    "@angular/common": ">= 5.0.0",
+    "@angular/forms": ">= 5.0.0",
     "@rd/core": ">= 6.0.0",
+    "@rd/common": ">= 4.0.0",
     "@rd/datetime": ">= 1.0.0",
     "rxjs": ">= 5.0.0"
   },

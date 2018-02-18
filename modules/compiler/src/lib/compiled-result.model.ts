@@ -1,4 +1,5 @@
 import { ComponentRef } from '@angular/core';
+
 import { DynamicTypeBuilder, DynamicComponent } from './dynamic-type.builder';
 
 export class CompiledResultModel {
