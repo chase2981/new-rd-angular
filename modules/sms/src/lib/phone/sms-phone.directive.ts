@@ -1,7 +1,8 @@
 import { Directive, Input, Output, EventEmitter } from '@angular/core';
 import { Observable, Subscription } from 'rxjs/Rx';
 
-import { CoreApiSelector, CoreApiSelectorParams, TextMsgItApiService } from '../../shared';
+import { CoreApiSelector, CoreApiSelectorParams,
+  TextMsgItApiService } from '@rd/core';
 
 @Directive({
   selector: '[rdSmsPhone]',

@@ -1,7 +1,7 @@
 import { Directive, Input, Output, EventEmitter } from '@angular/core';
 import { Observable, Subscription } from 'rxjs/Rx';
 
-import { CoreApiSelector, TextMsgItApiService } from '../../shared';
+import { CoreApiSelector, TextMsgItApiService } from '@rd/core';
 
 import { Account } from './account';
 import { ApiDirective } from '../shared';

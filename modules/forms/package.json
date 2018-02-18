@@ -1,6 +1,6 @@
 {
   "name": "@rd/forms",
-  "version": "4.2.2",
+  "version": "4.2.3",
   "main": "forms.umd.min.js",
   "typings": "forms.d.ts",
   "author": {
@@ -8,13 +8,14 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@angular/forms": ">= 2.0.0",
+    "@angular/core": ">= 5.0.0",
+    "@angular/forms": ">= 5.0.0",
     "@rd/core": ">= 6.0.0",
     "bootstrap": "3.x",
     "jquery": "2.x",
     "toastr": "2.x",
-    "pickmeup": "2.9.1",
-    "moment": "2.18.1",
+    "pickmeup": "2.x",
+    "moment": "2.x",
     "ckeditor": "4.x"
   },
   "scripts": {},

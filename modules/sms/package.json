@@ -1,23 +1,20 @@
 {
   "name": "@rd/sms",
   "version": "2.0.1",
-  "main": "index.js",
-  "typings": "index.d.ts",
+  "main": "sms.umd.min.js",
+  "typings": "sms.d.ts",
   "author": {
     "name": "rd"
   },
   "license": "MIT",
   "peerDependencies": {
-    "@rd/core": "2.x",
-    "@rd/datetime": "2.x"
+    "@angular/core": ">= 5.0.0",
+    "@rd/core": ">= 6.0.0",
+    "@rd/datetime": ">= 1.0.0",
+    "rxjs": ">= 5.0.0"
   },
-  "optionalDependencies": {
-    "moment": "2.x",
-    "moment-range": "2.x",
-    "moment-timezone": "0.x"
-  },
-  "engines" : { "npm" : ">= 3.0.0", "node" : ">=4.0.0" },
+  "engines" : { "npm" : ">= 5.0.0", "node" : ">= 8.0.0" },
   "scripts": {},
   "directories": {},
-  "readme": "readme.md"
+  "readme": "README.md"
 }

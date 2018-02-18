@@ -1,8 +1,8 @@
 import { Directive, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Observable, Subscription } from 'rxjs/Rx';
 
-import { TextMsgItApiService } from '../../../shared';
-import { Toast } from '../../../../common';
+import { TextMsgItApiService } from '@rd/core';
+import { Toast } from '@rd/common';
 
 import { Sms } from '../../sms';
 import { SmsModel } from '../../sms.model';

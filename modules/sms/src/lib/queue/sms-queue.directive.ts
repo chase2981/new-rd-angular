@@ -5,12 +5,12 @@ import { Observable, Subscription } from 'rxjs/Rx';
 import {
   CoreApiSelector, CoreApiService, ImmutableService, TextMsgItApiService,
   CoreApiSelectorParams
-} from '../../shared';
+} from '@rd/core';
+import { TimezoneService } from '@rd/datetime';
 
 import { Account } from '../account';
 import { Sms } from '../sms';
 import { SmsDirective } from '../sms.directive';
-import { TimezoneService } from '../../datetime';
 import { SmsQueue } from './sms-queue';
 
 declare var moment;

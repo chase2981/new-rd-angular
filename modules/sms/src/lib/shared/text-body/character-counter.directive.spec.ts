@@ -1,11 +1,12 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { AfterViewInit, Component, ElementRef, ViewChild, DebugElement } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild,
+  DebugElement } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { CoreApiService, TextMsgItApiService } from '../../../shared';
-import { CoreApiServiceMock } from '../../../testing';
+import { CoreApiService, TextMsgItApiService } from '@rd/core';
+import { CoreApiServiceMock } from '@rd/core/testing';
 
 import { TextBodyModule } from './text-body.module';
 import { CharacterCounterDirective } from './character-counter.directive';

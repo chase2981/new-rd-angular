@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { RdAngularCoreModule } from '../core.module';
-import { Toast } from '../../common';
+import { RdAngularCoreModule } from '@rd/core';
+import { Toast } from '@rd/common';
+import { RdAngularDatetimeModule } from '@rd/datetime';
+
 import { SmsSentDirective } from './sent';
 import { SmsReceiveDirective } from './receive';
 import { SmsOptOutDirective } from './opt-out';
@@ -12,7 +14,6 @@ import { SmsDirective } from './sms.directive';
 import { SmsQueueDirective, SmsQueueModelDirective,
   SmsQueueDataLayerDirective } from './queue';
 import { TextBodyModule } from './shared/text-body';
-import { RdAngularDatetimeModule } from '../datetime';
 
 @NgModule({
   imports: [

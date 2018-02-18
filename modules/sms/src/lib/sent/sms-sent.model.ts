@@ -1,4 +1,4 @@
-import { MomentFormat } from '../../datetime';
+import { MomentFormat } from '@rd/datetime';
 import { SmsSent } from './sms-sent';
 import { Sms } from '../sms';
 import { SentStatus } from '../sent-status';

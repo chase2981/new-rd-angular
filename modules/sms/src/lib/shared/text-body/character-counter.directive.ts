@@ -41,8 +41,8 @@ export class CharacterCounterDirective {
   count() {
     let self = this;
     let target = this.input;
-    let initialChars: string = target.val() || '';
-    let chars: string = target.val() || '';
+    let initialChars: any = target.val() || '';
+    let chars: any = target.val() || '';
     chars = chars.replace(/\[.+]/g, '');
     let rawLength = chars.length;
     let adjustedLength = rawLength;
@@ -71,7 +71,7 @@ export class CharacterCounterDirective {
 
   restrictInput() {
     let target = $(this.input);
-    let value: string = target.val();
+    let value: any = target.val();
     target.val(`${value.substr(0, 160)}`);
     target.focus();
   }

@@ -1,7 +1,8 @@
 import { Directive, EventEmitter, Output, OnInit, Input } from '@angular/core';
 import { Observable, Subscription } from 'rxjs/Rx';
 
-import { CoreApiService, CoreApiSelector, TextMsgItApiService, CoreApiSelectorParams } from '../../shared';
+import { CoreApiService, CoreApiSelector, TextMsgItApiService,
+  CoreApiSelectorParams } from '@rd/core';
 
 import { DataLayerDirective } from '../shared';
 

@@ -1,7 +1,7 @@
 import { Directive, EventEmitter, Input, Output, OnInit } from '@angular/core';
 import { BehaviorSubject, Observable, Subscription  } from 'rxjs/Rx';
 
-import { TextMsgItApiService, CoreApiSelector } from '../../shared';
+import { TextMsgItApiService, CoreApiSelector } from '@rd/core';
 
 @Directive({
   selector: '[rdSmsOptOut]',

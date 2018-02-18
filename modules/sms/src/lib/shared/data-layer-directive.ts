@@ -1,6 +1,6 @@
 import { Directive, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
 
-import { CoreApiService, CoreApiSelector, CoreApiSelectorParams } from '../../shared';
+import { CoreApiService, CoreApiSelector, CoreApiSelectorParams } from '@rd/core';
 
 export class DataLayerDirective {
     @Input() endpoint: string;

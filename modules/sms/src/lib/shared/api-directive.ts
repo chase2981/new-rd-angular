@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs/Rx';
 
-import { CoreApiSelector, TextMsgItApiService } from '../../shared';
+import { CoreApiSelector, TextMsgItApiService } from '@rd/core';
 
 export interface ApiDirective {
   endpoint: string;

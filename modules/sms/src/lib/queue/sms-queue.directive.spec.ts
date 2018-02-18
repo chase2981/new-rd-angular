@@ -6,11 +6,11 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { Observable } from 'rxjs/Rx';
 import * as moment from 'moment';
 
-import { CoreApiService, ImmutableService, TextMsgItApiService } from '../../shared';
-import { CoreApiServiceMock } from '../../testing';
-import { Toast } from '../../../common';
+import { CoreApiService, ImmutableService, TextMsgItApiService } from '@rd/core';
+import { CoreApiServiceMock } from '@rd/core/testing';
+import { Toast } from '@rd/common';
 
-import { TimezoneService } from '../../datetime';
+import { TimezoneService } from '@rd/datetime';
 import { SmsQueueDirective } from './sms-queue.directive';
 import { RdAngularSmsModule } from '../sms.module';
 

@@ -3,9 +3,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { AfterViewInit, Component, ViewChild, DebugElement } from '@angular/core';
 
-import { CoreApiService, ImmutableService, TextMsgItApiService } from '../../../shared';
-import { CoreApiServiceMock } from '../../../testing';
-import { Toast } from '../../../../common';
+import { CoreApiService, ImmutableService, TextMsgItApiService } from '@rd/core';
+import { CoreApiServiceMock } from '@rd/core/testing';
+import { Toast } from '@rd/common';
 
 import { SmsQueueModelDirective } from './sms-queue-model.directive';
 import { RdAngularSmsModule } from '../../sms.module';
@@ -62,7 +62,7 @@ describe('Directive: SmsQueueModel', () => {
   `
 })
 export class MockWrapperComponent implements AfterViewInit {
-  /* alternate way you could access directive 
+  /* alternate way you could access directive
     @ViewChild()--works in tests and in production */
   /* you would access it this way via component.directive */
   /* not available until afterViewInit() */
