@@ -5,13 +5,17 @@
     "baseUrl": "build",
     "sourceMap": true,
     "declaration": true,
+    "module": "umd",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
     "skipLibCheck": false,
     "types": [
-      "jssha"
+      "bootstrap",
+      "fullcalendar",
+      "jquery",
+      "toastr"
     ],
     "typeRoots": [
       "node_modules/@types"
@@ -23,18 +27,20 @@
     ]
   },
   "files": [
-    "./build/index.ts"
+    "./build/core.ts"
   ],
   "include": [
-    "./build/testing/index.ts"
+    "**/*.d.ts"
   ],
   "exclude": [
-    "node_modules/**",
+    "**/node_modules",
     "**/*.spec.ts"
   ],
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": true
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "./core.umd.js",
+    "flatModuleId": "@rd/core"
   }
 }
