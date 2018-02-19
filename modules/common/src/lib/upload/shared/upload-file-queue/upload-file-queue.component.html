@@ -10,7 +10,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let item of uploadComponent.uploader.queue">
+        <tr *ngFor="let item of uploadComponent?.uploader?.queue">
             <td>
               <rd-upload-file-preview [uploaderQueueItem]="item" [height]="50" [width]="50"></rd-upload-file-preview>
             </td>

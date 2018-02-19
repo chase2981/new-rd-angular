@@ -5,12 +5,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RdAngularCoreModule } from '@rd/core';
 import { RdAngularFormsModule } from '@rd/forms';
 
-import {
-    OneTimeBlockedApptDirective,
-    BlockedApptTimeDirective,
-    DayOfWeekHourDirective,
-    RecurringBlockedApptDirective
-} from './index';
+import { OneTimeBlockedApptDirective } from './one-time-blocked-appt.directive';
+import { BlockedApptTimeDirective } from './blocked-appt-time.directive';
+import { DayOfWeekHourDirective } from './day-of-week-hour.directive';
+import { RecurringBlockedApptDirective } from './recurring-blocked-appt.directive';
 
 @NgModule({
     imports: [

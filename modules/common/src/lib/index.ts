@@ -6,6 +6,6 @@ export * from './pipes';
 export * from './toast';
 export * from './simple-sort';
 export * from './upload';
-export * from './common.module';
+export {RdAngularCommonModule} from './common.module';
 export * from './fullcalendar';
 export * from './iframe';

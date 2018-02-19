@@ -16,7 +16,7 @@ import {   UploadComponent,
 import { ModalComponent, ModalShowButton, ModalHideButton, ModalToggleButton,
   BootstrapModalComponent
 } from './modal';
-import { LoadingIndicatorComponent } from './loading-indicator';
+import { LoadingIndicatorModule } from './loading-indicator';
 import { SimpleSortModule } from './simple-sort';
 import { Toast } from './toast';
 import { FullcalendarModule } from './fullcalendar/fullcalendar.module';
@@ -35,7 +35,6 @@ import { IFrameModule } from './iframe/iframe.module'
         UploadFileDropZoneComponent,
         UploadFileProgressBarComponent, UploadFileSelectButtonComponent,
         UploadFileSubmitButtonComponent,
-        LoadingIndicatorComponent,
     ],
     imports: [
         CommonModule,
@@ -44,9 +43,13 @@ import { IFrameModule } from './iframe/iframe.module'
         FileUploadModule,
         IFrameModule,
         SimpleSortModule,
+        LoadingIndicatorModule,
     ],
     exports: [
         ExpandingListViewComponent,
+        BootstrapModalComponent, ModalShowButton, ModalHideButton,
+        ModalToggleButton,
+        ModalComponent, ModalShowButton, ModalHideButton, ModalToggleButton,
         TelephonePipe,
         TabComponent, TabNavComponent, TabsetComponent,
         UploadComponent,
@@ -54,10 +57,10 @@ import { IFrameModule } from './iframe/iframe.module'
         UploadFileDropZoneComponent,
         UploadFileProgressBarComponent, UploadFileSelectButtonComponent,
         UploadFileSubmitButtonComponent,
-        LoadingIndicatorComponent,
         SimpleSortModule,
         FullcalendarModule,
         IFrameModule,
+        LoadingIndicatorModule,
     ],
     providers: [
         Toast
