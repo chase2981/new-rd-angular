@@ -1,1 +1,0 @@
-export * from './tab-nav/tab-nav.component';

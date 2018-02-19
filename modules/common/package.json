@@ -1,6 +1,6 @@
 {
   "name": "@rd/common",
-  "version": "4.2.4",
+  "version": "4.2.6",
   "main": "common.umd.min.js",
   "typings": "common.d.ts",
   "author": {
