@@ -1,6 +1,6 @@
 import { Component, ViewContainerRef } from '@angular/core';
 
-import { CompiledResultModel, TemplateCompiler } from '@turbonemesis/angular-lib';
+import { CompiledResultModel, TemplateCompiler } from '@rd/compiler';
 
 @Component({
   selector: 'app-root',

@@ -88,6 +88,7 @@
     "@rd/core": "file:modules/core/dist",
     "@rd/common": "file:modules/common/dist",
     "@rd/datetime": "file:modules/datetime/dist",
-    "@rd/forms": "file:modules/forms/dist"
+    "@rd/forms": "file:modules/forms/dist",
+    "@rd/compiler": "file:modules/compiler/dist"
   }
 }

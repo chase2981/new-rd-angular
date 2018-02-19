@@ -1,6 +1,6 @@
 {
     "name": "@rd/core",
-    "version": "6.1.0",
+    "version": "6.1.1",
     "main": "core.umd.min.js",
     "typings": "core.d.ts",
     "author": {

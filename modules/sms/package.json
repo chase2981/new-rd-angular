@@ -1,6 +1,6 @@
 {
   "name": "@rd/sms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "sms.umd.min.js",
   "typings": "sms.d.ts",
   "author": {
