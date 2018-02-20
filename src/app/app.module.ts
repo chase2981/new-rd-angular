@@ -20,8 +20,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    RdAngularCompilerModule,
     HttpModule,
+    RdAngularCompilerModule,
     RdAngularCoreModule,
     RdAngularCommonModule,
     RdAngularFormsModule,
