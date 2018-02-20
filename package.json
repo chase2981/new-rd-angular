@@ -90,6 +90,8 @@
     "@rd/common": "file:modules/common/dist",
     "@rd/datetime": "file:modules/datetime/dist",
     "@rd/forms": "file:modules/forms/dist",
-    "@rd/compiler": "file:modules/compiler/dist"
+    "@rd/compiler": "file:modules/compiler/dist",
+    "@rd/blocked-appt-time": "file:modules/blocked-appt-time/dist",
+    "@rd/sms": "file:modules/sms/dist"
   }
 }

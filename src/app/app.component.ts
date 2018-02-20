@@ -1,6 +1,7 @@
 import { Input, Component, ViewContainerRef } from '@angular/core';
 import { FileUploader } from 'ng2-file-upload';
 
+import { isFunction } from '@rd/core';
 import { CompiledResultModel, TemplateCompiler } from '@rd/compiler';
 
 
@@ -28,6 +29,7 @@ export class AppComponent {
   }
 
   ngOnInit(){
+    console.log('isFunction(fn)', isFunction(function(){}));
     this.templateCompiler.compile('/assets/auto-email-template.html', { id: 291, firstName: 'chase', lastName: 'gibbs' }, this.viewContainerRef, []).subscribe((result: CompiledResultModel) => {
       console.log('data.json', result);
     });

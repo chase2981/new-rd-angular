@@ -31,7 +31,7 @@
   <rd-loading-indicator [src]="'/assets/img/rd_wide_logo.png'"></rd-loading-indicator>
 </div>
 
-<rd-expanding-list-view class="collapse-card card-cross-sell" (toggle)="onToggle($event)" [open]="open">
+<rd-expanding-list-view class="collapse-card card-cross-sell" (toggle)="open = $event" [open]="open">
   <div rd-expanding-list-view-header>
     <b>header content</b>
   </div>

@@ -2,8 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { CookieXSRFStrategy, HttpModule, Request, XSRFStrategy } from '@angular/http';
+import { RdAngularCoreModule } from '@rd/core';
 import { RdAngularCommonModule } from '@rd/common';
+import { RdAngularFormsModule } from '@rd/forms';
 import { CompilerModule } from '@rd/compiler';
+import { RdAngularBlockedApptTimeModule } from '@rd/blocked-appt-time';
+import { RdAngularDatetimeModule } from '@rd/datetime';
+import { RdAngularSmsModule } from '@rd/sms';
 import { LoadingIndicatorModule } from '@turbonemesis/angular-lib/dist/lib/loading-indicator';
 import { TextEditorModule } from '@turbonemesis/angular-lib/dist/lib/text-editor';
 
@@ -17,9 +22,14 @@ import { AppComponent } from './app.component';
     BrowserModule,
     CompilerModule,
     HttpModule,
+    RdAngularCoreModule,
+    RdAngularCommonModule,
+    RdAngularFormsModule,
+    RdAngularBlockedApptTimeModule,
+    RdAngularDatetimeModule,
+    RdAngularSmsModule,
     // LoadingIndicatorModule,
     // TextEditorModule,
-    RdAngularCommonModule,
   ],
   providers: [
     // { provide: APP_BASE_HREF, useValue: '/' },
