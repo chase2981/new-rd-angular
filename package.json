@@ -25,6 +25,7 @@
     "@angular/platform-browser": "5.1.0",
     "@angular/platform-browser-dynamic": "5.1.0",
     "@angular/router": "5.1.0",
+    "bootstrap": "3.x",
     "ckeditor": "4.7.3",
     "core-js": "2.5.2",
     "fullcalendar": "^3.8.2",

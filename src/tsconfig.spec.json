@@ -7,6 +7,13 @@
     "target": "es5",
     "types": [
       "jasmine",
+      "jquery",
+      "bootstrap",
+      "ckeditor",
+      "fullcalendar",
+      "jssha",
+      "moment-range",
+      "toastr",
       "node"
     ]
   },
