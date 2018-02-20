@@ -2,7 +2,7 @@ import { Directive, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 import { TextMsgItApiService } from '@rd/core';
 
-import { SmsQueueModel } from '../../queue';
+import { SmsQueueModel } from '../../queue/sms-queue.model';
 import { SmsQueueModelDirective } from './sms-queue-model.directive';
 
 @Directive({
