@@ -1,4 +1,4 @@
-export { CompilerModule } from './compiler.module';
+export { RdAngularCompilerModule } from './compiler.module';
 export { CompiledResultModel } from './compiled-result.model';
 export { Compiler } from './compiler';
 export { DynamicCompilerModule } from './dynamic-compiler.module';

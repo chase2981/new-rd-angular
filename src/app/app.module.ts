@@ -5,7 +5,7 @@ import { CookieXSRFStrategy, HttpModule, Request, XSRFStrategy } from '@angular/
 import { RdAngularCoreModule } from '@rd/core';
 import { RdAngularCommonModule } from '@rd/common';
 import { RdAngularFormsModule } from '@rd/forms';
-import { CompilerModule } from '@rd/compiler';
+import { RdAngularCompilerModule } from '@rd/compiler';
 import { RdAngularBlockedApptTimeModule } from '@rd/blocked-appt-time';
 import { RdAngularDatetimeModule } from '@rd/datetime';
 import { RdAngularSmsModule } from '@rd/sms';
@@ -20,7 +20,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    CompilerModule,
+    RdAngularCompilerModule,
     HttpModule,
     RdAngularCoreModule,
     RdAngularCommonModule,

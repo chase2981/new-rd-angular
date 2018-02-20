@@ -33,5 +33,5 @@ export function createCompiler(compilerFactory: CompilerFactory) {
     ]
 })
 
-export class CompilerModule {
+export class RdAngularCompilerModule {
 }
