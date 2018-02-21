@@ -1,6 +1,6 @@
 {
   "name": "@rd/datetime",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "datetime.umd.min.js",
   "typings": "datetime.d.ts",
   "author": {
