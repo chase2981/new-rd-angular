@@ -20,7 +20,11 @@ export class AppComponent implements AfterViewInit {
   });
   @ViewChild('photosModal') photosModal: BootstrapModalComponent;
 
+  modalOptions = {
+    show: true
+  };
   open: boolean = false;
+  showModal: boolean = false;
   textEditorNgModel: string;
   test: string;
   textEditorConfig = {

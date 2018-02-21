@@ -42,8 +42,10 @@
 </rd-expanding-list-view>
 
 
+<button class="btn btn-warning" (click)="showModal = true">Show Bootstrap Modal</button>
 
-<rd-bootstrap-modal class='modal--fullScreen' #photosModal [options]="modalOptions" (hidden)="onHidden($event)">
+
+<rd-bootstrap-modal *ngIf="showModal" class='modal--fullScreen' #photosModal [options]="modalOptions" (hidden)="showModal = false">
   <div rd-bootstrap-modal-header>
     <button type="button" (click)="photosModal.hide()" class="close"><i class="stream stream-close"></i></button>
     <h4 class="modal-title">Photos</h4>
