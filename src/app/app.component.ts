@@ -7,6 +7,7 @@ import { TimezoneService } from '@rd/datetime';
 
 import {RdCoreAuthServiceConfig} from './do_not_make_public';
 import { BootstrapModalComponent } from '@rd/common';
+import { CharacterCounterDirective } from '@rd/sms';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ export class AppComponent implements AfterViewInit {
     url: '/upload',
     autoUpload: true
   });
+  @ViewChild('charCounter') charCounter: CharacterCounterDirective;
   @ViewChild('photosModal') photosModal: BootstrapModalComponent;
 
   modalOptions = {
@@ -40,6 +42,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   ngOnInit(){
+    console.log('@rd/sms.charCounter', this.charCounter);
     console.log('@rd/datetime.timezoneSvc', this.timezoneSvc);
     console.log('@rd/core.coreApiSvc', this.coreApiSvc);
     console.log('@rd/core.isFunction(fn)', isFunction(function(){}));

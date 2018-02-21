@@ -3,7 +3,7 @@
   <h1>
     Welcome to {{title}}!
   </h1>
-  <input type="text" [(ngModel)]="test" rdInputThrottle [debounceDuration]="3000" (onStartedTyping)="onChange($event)" (onFinishedTyping)="onChange($event)">
+  <input type="text" [(ngModel)]="test" rdInputThrottle [debounceDuration]="3000" (onStartedTyping)="onChange($event)" (onFinishedTyping)="onChange($event)" rdCharacterCounter #charCounter="rdCharacterCounter">
 </div>
 <h2>Here are some links to help you start: </h2>
 <ul>
