@@ -1,6 +1,6 @@
 {
   "name": "@rd/blocked-appt-time",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "blocked-appt-time.umd.min.js",
   "typings": "blocked-appt-time.d.ts",
   "author": {

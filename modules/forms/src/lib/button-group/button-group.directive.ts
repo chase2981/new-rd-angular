@@ -53,5 +53,3 @@ export class ButtonGroupDirective extends NgModelInput implements OnInit, AfterC
           this.syncNgModel(newVal);
     }
 }
-
-export const BUTTON_GROUP_DIRECTIVES = [ButtonGroupDirective, ButtonGroupButtonDirective];

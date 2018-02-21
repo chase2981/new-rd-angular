@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RdAngularCoreModule } from '@rd/core';
 import { BootstrapSelectModule } from './bootstrap-select';
-import { BUTTON_GROUP_DIRECTIVES } from './button-group';
+import { ButtonGroupButtonDirective, ButtonGroupDirective } from './button-group';
 import { DatepickerComponent, RangepickerComponent, DatepickerToggleButton, DatepickerQuickAccessButton, DropdownBuilderComponent, DatepickerComboSelectComponent } from './datepicker';
 import { TextEditorDirective } from './text-editor';
 import { ComboSelectModule } from './combo';
@@ -22,7 +22,7 @@ import { BlurDirective } from './blur';
 @NgModule({
   declarations: [
     BlurDirective,
-    BUTTON_GROUP_DIRECTIVES,
+    ButtonGroupButtonDirective, ButtonGroupDirective,
     ColorPickerColorComponent,
     ColorPickerComponent,
     DatepickerComboSelectComponent,
@@ -47,7 +47,7 @@ import { BlurDirective } from './blur';
   ],
   exports: [
     BlurDirective,
-    BUTTON_GROUP_DIRECTIVES,
+    ButtonGroupButtonDirective, ButtonGroupDirective,
     ColorPickerColorComponent,
     ColorPickerComponent,
     ComboSelectModule,
