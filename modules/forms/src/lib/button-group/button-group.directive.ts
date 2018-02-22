@@ -2,7 +2,7 @@ import { AfterContentInit, Component, ContentChildren, Directive, EventEmitter, 
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 
 import { NgModelInput, NgModelInputValueAccessor } from '../ng-model-input';
-import { ButtonGroupButtonDirective } from './button-group-button';
+import { ButtonGroupButtonDirective } from './button-group-button/button-group-button.directive';
 
 @Directive({
     selector: 'rd-button-group',

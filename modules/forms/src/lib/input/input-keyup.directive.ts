@@ -1,6 +1,6 @@
 import { Directive, Input, Output, EventEmitter, HostListener } from '@angular/core';
 
-import { KEYCODE } from '../shared';
+import { KEYCODE } from '../shared/keycode.enum';
 
 @Directive({
   selector: '[rdInputKeyup]'

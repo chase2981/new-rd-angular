@@ -21,7 +21,10 @@ $NGC -p $PWD/tsconfig.json
 # Make directory dist/bundles
 mkdir $PWD/dist/bundles
 # Rollup index.js into bundles/forms.umd.min.js w/sourcemaps
-$ROLLUP $PWD/dist/forms.umd.js -o $PWD/dist/forms.umd.min.js -f es -m
+# $ROLLUP -c=rollup.config.js
+$ROLLUP $PWD/dist/forms.js -o $PWD/dist/bundles/forms.umd.min.js -f umd --name @rd/forms -m \
+--globals @rd/core:rd.core,@angular/core:ng.core,moment:moment --external @rd/core,@angular/core,@angular/forms,moment \
+$1 $2 $3 $4 $5 $6 $7 $8 $9
 
 # Copy library package.json + README.md, etc. to ./dist directory
 cp $PWD/package.json $PWD/dist/package.json

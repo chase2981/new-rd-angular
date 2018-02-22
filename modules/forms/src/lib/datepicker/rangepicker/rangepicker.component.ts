@@ -22,10 +22,11 @@ import {
     OnDestroy,
     SimpleChange
 } from '@angular/core';
-import * as moment from 'moment';
+
+declare var moment: any;
 
 import { NgModelInputValueAccessor } from '../../ng-model-input';
-import { DatepickerHelper, DatepickerQuickAccessButton, DATE_TYPE_ENUM } from '../shared';
+import { DatepickerHelper, DatepickerQuickAccessButton, DATE_TYPE_ENUM } from '../shared/index';
 
 @Component({
     selector: 'rd-rangepicker',
@@ -119,11 +120,11 @@ export class RangepickerComponent extends DatepickerHelper implements OnInit, Af
         this.quickAccessBtns.filter(btn => btn.value === quickAccessBtn.value).forEach(btn => btn.active = true);
     }
 
-    format(newVal: moment.Moment[]): string[] {
+    format(newVal: any[]): string[] {
         return [newVal[0].format(this.momentFormat), newVal[1].format(this.momentFormat)];
     }
 
-    getPluginValueAsMomentArray(): moment.Moment[] {
+    getPluginValueAsMomentArray(): any[] {
         let range = $(this.calendarElem).pickmeup('get_date', false);
         return [moment(range[0]), moment(range[1])]; //moment(new Date(newVal)).format(this.format);
     }

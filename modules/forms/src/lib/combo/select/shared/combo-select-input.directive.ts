@@ -1,7 +1,7 @@
 import { Directive, ElementRef, HostBinding, HostListener } from '@angular/core';
 
 import { ComboSelectComponent } from '../combo-select.component';
-import { KEYCODE, SelectOption } from '../../../shared';
+import { KEYCODE, SelectOption } from '../../../shared/index';
 
 @Directive({
   selector: 'input[rdComboSelectInput]'

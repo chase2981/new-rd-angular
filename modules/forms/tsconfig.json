@@ -2,8 +2,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "build",
-    "sourceMap": true,
+    "baseUrl": ".",
+    "rootDir": "./build",
+    "inlineSourceMap": true,
+    "module": "es2015",
     "declaration": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -11,13 +13,15 @@
     "target": "es5",
     "skipLibCheck": false,
     "types": [
-      "ckeditor",
-      "jquery"
+      "jquery",
+      "moment",
+      "ckeditor"
     ],
     "typeRoots": [
       "node_modules/@types"
     ],
     "lib": [
+      "es5",
       "es2016",
       "dom",
       "es2015"
@@ -27,17 +31,15 @@
     "./build/forms.ts"
   ],
   "include": [
-    "./build/typings.d.ts"
+    "./build/**/*.d.ts"
   ],
   "exclude": [
-    "node_modules/**",
+    "**/node_modules",
     "**/*.spec.ts"
   ],
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": true,
-    "flatModuleOutFile": "./forms.umd.js",
-    "flatModuleId": "@rd/forms"
+    "skipTemplateCodegen": true
   }
 }

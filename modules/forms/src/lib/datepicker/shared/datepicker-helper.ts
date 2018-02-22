@@ -1,7 +1,7 @@
 import { Component, ContentChildren, Directive, Input, OnInit, Optional, Output, ElementRef, EventEmitter, AfterViewInit, HostListener, QueryList } from '@angular/core';
 
 import { NgModelInput } from '../../ng-model-input';
-import { DropdownBuilderComponent } from './dropdown-builder';
+import { DropdownBuilderComponent } from './dropdown-builder/index';
 import { DATE_TYPE_ENUM } from './date-type.enum';
 
 @Directive({

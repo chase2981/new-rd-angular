@@ -1,7 +1,7 @@
 {
   "name": "@rd/forms",
-  "version": "4.2.6",
-  "main": "forms.umd.min.js",
+  "version": "7.0.0",
+  "main": "bundles/forms.umd.min.js",
   "typings": "forms.d.ts",
   "author": {
     "name": "rd"

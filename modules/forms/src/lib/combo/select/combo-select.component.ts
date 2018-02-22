@@ -2,8 +2,8 @@ import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angu
 import { Observer, Subscription } from 'rxjs/Rx';
 
 import { NgModelInputValueAccessor } from '../../ng-model-input';
-import { ComboSelect } from '../shared';
-import { KEYCODE, SelectOption } from '../../shared';
+import { ComboSelect } from '../shared/combo-select';
+import { KEYCODE, SelectOption } from '../../shared/index';
 
 @Component({
   selector: 'rd-combo-select',

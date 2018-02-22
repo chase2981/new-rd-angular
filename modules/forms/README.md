@@ -1,6 +1,6 @@
 <!--[![Build Status](https://travis-ci.org/ng2select/bootstrap.svg?branch=master)](https://travis-ci.org/ng2select/bootstrap)-->
 
-## @rd/forms@2.x
+## @rd/forms@7.x
 
 #### this module contains any javascript code that has to do with html forms. (custom input components/directives etc)
 it is reliant on the @rd/core, jquery, pickmeup, moment, and ckeditor modules. this module currently contains components/directives such as button-group-input, text-editor, datepicker, etc.

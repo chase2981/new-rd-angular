@@ -1,6 +1,6 @@
 import { Directive, ElementRef, OnInit, OnDestroy, Input, HostListener } from '@angular/core';
 
-import { SelectOption } from '../../../shared';
+import { SelectOption } from '../../../shared/index';
 import { ComboSelectComponent } from '../combo-select.component';
 
 @Directive({

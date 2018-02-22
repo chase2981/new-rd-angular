@@ -10,7 +10,7 @@ import {
   SelectToggleBtnDirective,
   OptionDirective, SelectTitleDirective,
   SelectDropdownDirective
-} from './shared';
+} from './shared/index';
 
 @NgModule({
   imports: [

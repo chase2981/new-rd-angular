@@ -1,5 +1,6 @@
 import { AfterViewInit, Directive, ElementRef, Input, Output, OnChanges, OnDestroy, EventEmitter, SimpleChange, SimpleChanges } from '@angular/core';
-import * as moment from 'moment';
+
+declare var moment: any;
 
 import { extend } from '@rd/core';
 import { NgModelInput, NgModelInputValueAccessor } from '../../ng-model-input';
@@ -8,7 +9,7 @@ import { NgModelInput, NgModelInputValueAccessor } from '../../ng-model-input';
   selector: '[rdPickmeup]'
 })
 export class PickmeupDirective implements AfterViewInit, OnDestroy {
-  @Input() moment: moment.Moment;
+  @Input() moment: any;
   @Input() mode: string = 'single';
   @Input() options: any = {};
   @Output() onPickmeupChange: EventEmitter<any> = new EventEmitter<any>();
@@ -38,17 +39,17 @@ export class PickmeupDirective implements AfterViewInit, OnDestroy {
     this.pickmeup = $(this.elem).data('pickmeup-options');
   }
 
-  getPluginValue(): moment.Moment | moment.Moment[] {
+  getPluginValue(): any | any[] {
     return this.mode === 'single' ? moment($(this.elem).pickmeup('get_date', false)) : this.getRange()
   }
 
-  setPluginValue(newVal: moment.Moment | moment.Moment[]) {
+  setPluginValue(newVal: any | any[]) {
     if (!newVal)
       return;
     $(this.elem).pickmeup('set_date', newVal);
   }
 
-  private getRange(): moment.Moment[] {
+  private getRange(): any[] {
     let range = $(this.elem).pickmeup('get_date', false);
     return [moment(range[0]), moment(range[1])];
   }

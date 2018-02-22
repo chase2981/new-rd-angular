@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SelectModule } from '../select';
+import { SelectModule } from '../select/select.module';
 import { BootstrapSelectComponent } from './bootstrap-select.component';
 import {
   BootstrapToggleBtnComponent, BootstrapActionsBoxComponent,
   BootstrapDropdownMenuComponent, BootstrapFilterComponent
-} from './shared';
+} from './shared/index';
 
 @NgModule({
   imports: [

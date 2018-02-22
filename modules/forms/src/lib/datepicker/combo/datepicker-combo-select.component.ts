@@ -1,9 +1,10 @@
 import { Component, Input, OnInit, Output, OnChanges, SimpleChange, SimpleChanges, EventEmitter, ViewChild, ViewEncapsulation } from '@angular/core';
-import * as moment from 'moment';
+
+declare var moment: any;
 
 import { NgModelInput, NgModelInputValueAccessor } from '../../ng-model-input';
-import { ComboSelectComponent } from '../../combo';
-import { PickmeupDirective } from '../../shared';
+import { ComboSelectComponent } from '../../combo/index';
+import { PickmeupDirective } from '../../shared/index';
 import { DatepickerToggleButton } from "../shared/datepicker-helper";
 import { DATE_TYPE_ENUM } from "../shared/date-type.enum";
 
@@ -15,12 +16,12 @@ import { DATE_TYPE_ENUM } from "../shared/date-type.enum";
   encapsulation: ViewEncapsulation.Emulated,
 })
 export class DatepickerComboSelectComponent extends NgModelInput implements OnInit, OnChanges {
-  @Input() ngModel: moment.Moment;
+  @Input() ngModel: any;
   @Input() pickmeupOptions: any = {
     default_date: false
   };
-  @Input() min: moment.Moment | string;
-  @Input() max: moment.Moment | string;
+  @Input() min: any | string;
+  @Input() max: any | string;
   @Input() buttonIconClass: any = 'fa fa-calendar';
   @Input() buttonClass: any = 'btn btn-default';
   @Input() ngValidateClass: any;
@@ -56,7 +57,7 @@ export class DatepickerComboSelectComponent extends NgModelInput implements OnIn
   }
 
   isValidInput(newVal: string) {
-    let result: moment.Moment;
+    let result: any;
     try {
       result = moment(newVal, this.momentFormat);
     } catch (e) {
@@ -92,12 +93,12 @@ export class DatepickerComboSelectComponent extends NgModelInput implements OnIn
     event.target.blur();
   }
 
-  onPickmeupChange(newVal: moment.Moment) {
+  onPickmeupChange(newVal: any) {
     this.setNgModel(newVal);
     this.open = false;
   }
 
-  setNgModel(newVal: moment.Moment) {
+  setNgModel(newVal: any) {
     let result: any = newVal;
 
     if (this.outputType === DATE_TYPE_ENUM.STRING) {

@@ -1,2 +1,2 @@
 export * from './color-picker.component';
-export * from './shared';
+export * from './shared/index';

@@ -3,21 +3,22 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RdAngularCoreModule } from '@rd/core';
-import { BootstrapSelectModule } from './bootstrap-select';
-import { ButtonGroupButtonDirective, ButtonGroupDirective } from './button-group';
-import { DatepickerComponent, RangepickerComponent, DatepickerToggleButton, DatepickerQuickAccessButton, DropdownBuilderComponent, DatepickerComboSelectComponent } from './datepicker';
-import { TextEditorDirective } from './text-editor';
-import { ComboSelectModule } from './combo';
-import { TimePickerComboSelectComponent } from './timepicker';
-import { PickmeupModule } from './shared/pickmeup';
-import { SelectBuilderModule } from './shared/select-builder';
-import { SelectModule } from './select';
+import { BootstrapSelectModule } from './bootstrap-select/index';
+import { ButtonGroupButtonDirective, ButtonGroupDirective } from './button-group/index';
+import { DatepickerComponent, RangepickerComponent, DatepickerToggleButton, 
+  DatepickerQuickAccessButton, DropdownBuilderComponent, DatepickerComboSelectComponent } from './datepicker/index';
+import { TextEditorDirective } from './text-editor/index';
+import { ComboSelectModule } from './combo/index';
+import { TimePickerComboSelectComponent } from './timepicker/index';
+import { PickmeupModule } from './shared/pickmeup/index';
+import { SelectBuilderModule } from './shared/select-builder/index';
+import { SelectModule } from './select/index';
 import { UiMaskDirective } from './ui-mask.directive';
-import { ColorPickerColorComponent, ColorPickerComponent } from './color-picker';
-import { InputModule } from './input';
+import { ColorPickerColorComponent, ColorPickerComponent } from './color-picker/index';
+import { InputModule } from './input/index';
 import { ApiFilterGroupModule } from './api-filter-group/api-filter-group.module';
-import { RecaptchaComponent } from './recaptcha';
-import { BlurDirective } from './blur';
+import { RecaptchaComponent } from './recaptcha/index';
+import { BlurDirective } from './blur/index';
 
 @NgModule({
   declarations: [

@@ -1,2 +1,2 @@
 export * from './combo-select.component';
-export * from './shared';
+export * from './shared/index';

@@ -22,10 +22,11 @@ import {
     OnDestroy,
     SimpleChange
 } from '@angular/core';
-import * as moment from 'moment';
+
+declare var moment: any;
 
 import { NgModelInputValueAccessor } from '../../ng-model-input';
-import { DatepickerHelper, DatepickerQuickAccessButton, DATE_TYPE_ENUM } from '../shared';
+import { DatepickerHelper, DatepickerQuickAccessButton, DATE_TYPE_ENUM } from '../shared/index';
 
 @Component({
     selector: 'rd-datepicker',
@@ -100,8 +101,8 @@ export class DatepickerComponent extends DatepickerHelper implements OnInit, Aft
       this.quickAccessBtns.filter(btn => this.isActiveQuickAccessButton(btn)).forEach(btn => btn.active = true);
     }
 
-    setNgModel(newVal: moment.Moment) {
-        let result: moment.Moment | string = newVal;
+    setNgModel(newVal: any) {
+        let result: any | string = newVal;
 
         if (this.outputType === DATE_TYPE_ENUM.STRING)
             result = newVal.format(this.momentFormat);
@@ -110,7 +111,7 @@ export class DatepickerComponent extends DatepickerHelper implements OnInit, Aft
         this.change.emit(result);
     }
 
-    setPluginValue(newVal: moment.Moment) {
+    setPluginValue(newVal: any) {
         return $(this.calendarElem).pickmeup('set_date', newVal);
     }
 
