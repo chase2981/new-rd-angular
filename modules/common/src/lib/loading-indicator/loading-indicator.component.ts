@@ -8,7 +8,7 @@ import { Component, ElementRef, Input, OnInit, OnDestroy } from '@angular/core';
 export class LoadingIndicatorComponent implements OnInit, OnDestroy {
   @Input() height: any = 75;
   @Input() width: any = 75;
-  @Input() src: string = "https://assets.listia.com/photos/906aea0f142d9ba040d5/original.jpg?s=320x320m&sig=7ccd9e662afed4e3&ts=1376259719";
+  @Input() src: string = "/assets/images/loading-bubbles-dark.svg";
 
   constructor() { }
 
