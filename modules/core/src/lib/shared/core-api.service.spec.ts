@@ -20,7 +20,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/toPromise';
 
-import { ApiService, AuthService, AuthServiceConfig, Credentials } from './shared';
+import { ApiService } from './shared/api.service';
 import { CoreApiService } from './core-api.service';
 import { CoreAuthService } from './core-auth.service';
 import { CoreAuthServiceConfig } from './core-auth-service-config';

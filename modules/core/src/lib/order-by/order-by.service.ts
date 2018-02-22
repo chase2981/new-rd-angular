@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { ImmutableService } from '../shared';
+import { ImmutableService } from '../shared/immutable.service';
 
 @Injectable()
 export class OrderByService {

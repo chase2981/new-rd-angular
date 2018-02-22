@@ -4,7 +4,7 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 import 'jssha';
 
-import { AuthService } from './shared';
+import { AuthService } from './shared/auth.service';
 import { TextMsgItAuthServiceConfig } from './text-msg-it-auth-service-config';
 
 

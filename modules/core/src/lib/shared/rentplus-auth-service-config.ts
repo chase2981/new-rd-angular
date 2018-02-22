@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AuthService, AuthServiceConfig } from './shared';
+import { AuthServiceConfig } from './shared/auth-service-config';
 
 
 export class RentplusAuthServiceConfig extends AuthServiceConfig { }

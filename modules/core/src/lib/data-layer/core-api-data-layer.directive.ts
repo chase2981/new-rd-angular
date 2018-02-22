@@ -1,6 +1,7 @@
 import { Directive, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
 
-import { CoreApiService, CoreApiSelector } from '../shared';
+import { CoreApiService } from '../shared/core-api.service';
+import { CoreApiSelector } from '../shared/core-api.selector';
 
 @Directive({
   selector: '[rdCoreApiDataLayer]'

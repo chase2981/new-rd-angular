@@ -3,7 +3,7 @@ import { Headers } from '@angular/http';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-import { AuthService } from './shared';
+import { AuthService } from './shared/auth.service';
 import { CoreAuthServiceConfig } from './core-auth-service-config';
 
 declare var jsSHA: jsSHA.jsSHA;

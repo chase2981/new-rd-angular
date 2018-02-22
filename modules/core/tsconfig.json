@@ -2,8 +2,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "build",
-    "sourceMap": true,
+    "baseUrl": ".",
+    "rootDir": "./build",
+    "inlineSourceMap": true,
+    "module": "es2015",
     "declaration": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -19,7 +21,11 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "paths": {
+      "/testing": ["./src/testing"]
+    },
     "lib": [
+      "es5",
       "es2016",
       "dom",
       "es2015"
@@ -30,15 +36,12 @@
   ],
   "include": [
     "./build/testing/**/*.ts",
-    "**/*.d.ts"
+    "./build/**/*.d.ts"
   ],
   "exclude": [
     "**/node_modules",
     "**/*.spec.ts"
   ],
-  "paths": {
-    "/testing": "src/testing"
-  },
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,

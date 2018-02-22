@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ImmutableService } from '../shared';
+import { ImmutableService } from '../shared/immutable.service';
 
 import { OrderByPipe } from './order-by.pipe';
 import { OrderByObjectPipe } from './order-by-object.pipe';
