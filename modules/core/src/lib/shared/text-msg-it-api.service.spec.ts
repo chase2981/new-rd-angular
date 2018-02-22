@@ -20,7 +20,8 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/toPromise';
 
-import { ApiService, AuthService, AuthServiceConfig, Credentials } from './shared';
+import { AuthService } from './shared/auth.service';
+import { AuthServiceConfig } from './shared/auth-service-config';
 import { TextMsgItApiService } from './text-msg-it-api.service';
 import { TextMsgItAuthService } from './text-msg-it-auth.service';
 import { TextMsgItAuthServiceConfig } from './text-msg-it-auth-service-config';

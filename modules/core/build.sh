@@ -20,8 +20,8 @@ $NGC -p $PWD/tsconfig.json
 # Make directory dist/bundles
 mkdir $PWD/dist/bundles
 # Rollup index.js into bundles/common.umd.min.js w/sourcemaps
-$ROLLUP $PWD/dist/core.js -o $PWD/dist/core.umd.min.js -f es -m
-$ROLLUP $PWD/dist/testing/index.js -o $PWD/dist/testing/core.umd.min.js -f es -m
+$ROLLUP $PWD/dist/core.js -o $PWD/dist/bundles/core.umd.min.js -f umd --name @rd/core -m
+$ROLLUP $PWD/dist/testing/index.js -o $PWD/dist/bundles/core-testing.umd.min.js -f umd --name @rd/core/testing -m
 
 # Copy library package.json + README.md, etc. to ./dist directory
 cp $PWD/package.json $PWD/dist/package.json
