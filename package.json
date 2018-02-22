@@ -9,11 +9,11 @@
     "build-core": "cd modules/core && bash build.sh",
     "e2e": "ng e2e",
     "lint": "ng lint",
-    "prepush": "ng test",
+    "prepush": "ng test --single-run",
     "serve": "npm run build && lite-server -c=.bs-config.json",
     "ng": "ng",
     "start": "ng serve",
-    "test": "ng test",
+    "test": "ng test --single-run",
     "test-lib": "cd modules/angular-lib && bash test.sh"
   },
   "private": false,
