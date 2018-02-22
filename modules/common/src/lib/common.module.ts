@@ -6,19 +6,19 @@ import { FileUploadModule } from 'ng2-file-upload';
 
 import { RdAngularCoreModule } from '@rd/core';
 
-import { ExpandingListViewComponent } from './expanding-list-view';
-import { TelephonePipe } from './pipes';
-import { TabComponent, TabNavComponent, TabsetComponent } from './tabset';
+import { ExpandingListViewComponent } from './expanding-list-view/expanding-list-view.component';
+import { TelephonePipe } from './pipes/telephone.pipe';
+import { TabComponent, TabNavComponent, TabsetComponent } from './tabset/index';
 import {   UploadComponent,
   UploadFileQueueComponent, UploadFilePreviewComponent, UploadFileDropZoneComponent,
   UploadFileProgressBarComponent, UploadFileSelectButtonComponent, UploadFileSubmitButtonComponent
- } from './upload';
+ } from './upload/index';
 import { ModalComponent, ModalShowButton, ModalHideButton, ModalToggleButton,
   BootstrapModalComponent
-} from './modal';
-import { LoadingIndicatorModule } from './loading-indicator';
-import { SimpleSortModule } from './simple-sort';
-import { Toast } from './toast';
+} from './modal/index';
+import { LoadingIndicatorModule } from './loading-indicator/index';
+import { SimpleSortModule } from './simple-sort/index';
+import { Toast } from './toast/index';
 import { FullcalendarModule } from './fullcalendar/fullcalendar.module';
 import { IFrameModule } from './iframe/iframe.module'
 

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SimpleSortDirective } from './simple-sort.directive';
-import { SimpleSortFieldComponent } from './shared';
+import { SimpleSortFieldComponent } from './shared/simple-sort-field.component';
 
 @NgModule({
     declarations: [

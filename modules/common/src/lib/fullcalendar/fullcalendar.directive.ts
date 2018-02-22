@@ -3,7 +3,6 @@ import {
   NgZone
 } from '@angular/core';
 import * as moment from 'moment';
-import 'fullcalendar';
 
 import { extend, equals } from '@rd/core';
 

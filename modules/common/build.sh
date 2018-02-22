@@ -19,8 +19,9 @@ $GULP inline-templates --gulpfile $PWD/gulpfile.js
 $NGC -p $PWD/tsconfig.json
 # Make directory dist/bundles
 mkdir $PWD/dist/bundles
-# Rollup index.js into bundles/common.umd.min.js w/sourcemaps
-$ROLLUP $PWD/dist/common.umd.js -o $PWD/dist/common.umd.min.js -f es -m
+# Rollup index.js into bundles/common.umd.min.js w/sourcemaps -f iife
+$ROLLUP $PWD/dist/common.js -o $PWD/dist/bundles/common.umd.min.js -f umd --name @rd/common -m \
+--globals @angular/core:ng.core,@angular/common:ng.common,ng2-file-upload:ng2FileUpload,@rd/core:rd.core,@angular/platform-browser:ng.platformBrowser,@angular/forms:ng.forms
 
 # Copy library package.json + README.md, etc. to ./dist directory
 cp $PWD/package.json $PWD/dist/package.json

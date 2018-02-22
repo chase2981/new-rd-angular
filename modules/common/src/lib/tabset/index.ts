@@ -1,4 +1,4 @@
 export * from './tabset.component';
-export * from './tab';
-export * from './tab-nav';
-export * from './shared';
+export * from './tab/index';
+export * from './tab-nav/index';
+export * from './shared/index';
