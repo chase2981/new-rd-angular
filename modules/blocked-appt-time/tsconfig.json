@@ -2,8 +2,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "build",
+    "baseUrl": ".",
+    "rootDir": "./build",
     "sourceMap": true,
+    "module": "es2015",
     "declaration": true,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -20,6 +22,7 @@
       "node_modules/@types"
     ],
     "lib": [
+      "es5",
       "es2016",
       "dom",
       "es2015"
@@ -29,7 +32,7 @@
     "./build/blocked-appt-time.ts"
   ],
   "include": [
-    "**/*.d.ts"
+    "./build/**/*.d.ts"
   ],
   "exclude": [
     "**/node_modules",
@@ -38,8 +41,6 @@
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
     "strictMetadataEmit": true,
-    "skipTemplateCodegen": true,
-    "flatModuleOutFile": "./blocked-appt-time.umd.js",
-    "flatModuleId": "@rd/blocked-appt-time"
+    "skipTemplateCodegen": true
   }
 }

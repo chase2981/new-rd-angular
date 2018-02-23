@@ -1,7 +1,7 @@
 {
   "name": "@rd/blocked-appt-time",
-  "version": "1.0.6",
-  "main": "blocked-appt-time.umd.min.js",
+  "version": "7.0.0",
+  "main": "bundles/blocked-appt-time.umd.min.js",
   "typings": "blocked-appt-time.d.ts",
   "author": {
     "name": "rd"

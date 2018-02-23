@@ -1,7 +1,7 @@
 {
   "name": "@rd/datetime",
-  "version": "1.0.3",
-  "main": "datetime.umd.min.js",
+  "version": "7.0.0",
+  "main": "bundles/datetime.umd.min.js",
   "typings": "datetime.d.ts",
   "author": {
     "name": "rd"

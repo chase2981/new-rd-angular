@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs/Rx';
 
 import { NgModelInputValueAccessor } from '@rd/forms';
 import { CoreApiService } from '@rd/core';
-import { DayOfWeekHour, DayOfWeekHourModel } from './shared';
+import { DayOfWeekHour, DayOfWeekHourModel } from './shared/index';
 
 @Directive({
   selector: '[rdDayOfWeekHour]',

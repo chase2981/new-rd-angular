@@ -20,7 +20,9 @@ $NGC -p $PWD/tsconfig.json
 # Make directory dist/bundles
 mkdir $PWD/dist/bundles
 # Rollup index.js into bundles/common.umd.min.js w/sourcemaps
-$ROLLUP $PWD/dist/compiler.umd.js -o $PWD/dist/compiler.umd.min.js -f es -m
+$ROLLUP $PWD/dist/compiler.js -o $PWD/dist/bundles/compiler.umd.min.js -f umd --name @rd/compiler -m \
+--external '@rd/core','@angular/core','@angular/compiler','@angular/common','@angular/http','@angular/forms','@angular/platform-browser-dynamic','rxjs/Observable','rxjs/add/operator/map' \
+--globals @rd/core:rd.core,@angular/core:ng.core,@angular/compiler:ng.compiler,@angular/http:ng.http,@angular/forms:ng.forms,@angular/platform-browser-dynamic:ng.platformBrowserDynamic,@angular/common:ng.common,rxjs/Observable:rxjs.observable
 
 # Copy library package.json + README.md, etc. to ./dist directory
 cp $PWD/package.json $PWD/dist/package.json

@@ -6,9 +6,9 @@ import {environment} from '../environments/environment';
 
 @Injectable()
 export class RdCoreAuthServiceConfig implements CoreAuthServiceConfig {
-  apiKey: string = 'bbd30373-2';
+  apiKey: string = '';
   authToken: string = '';
-  secretKey: string = 'abbd7a3b-af84-432c-b';
+  secretKey: string = '';
   userId: string = '';
 
   constructor() {

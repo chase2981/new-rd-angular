@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RdAngularCoreModule } from '@rd/core';
 
 import { TimezoneService,
-    UtcToLocalDateTimePipe, UtcToLocalTimePipe } from './shared';
+    UtcToLocalDateTimePipe, UtcToLocalTimePipe } from './shared/index';
 
 @NgModule({
     imports: [

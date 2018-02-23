@@ -1,7 +1,7 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 import { UtcToLocalTimePipe } from './utc-to-local-time.pipe';
 
 import { CoreApiService } from '@rd/core';

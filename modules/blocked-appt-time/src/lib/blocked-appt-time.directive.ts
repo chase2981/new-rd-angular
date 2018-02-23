@@ -6,7 +6,7 @@ import * as moment from 'moment';
 import { NgModelInputValueAccessor, NgModelInput } from '@rd/forms';
 import { CoreApiService } from '@rd/core';
 import { isDefined } from '@rd/core';
-import { BlockedApptTime, BlockedApptTimeModel, DayOfWeekHourModel } from './shared';
+import { BlockedApptTime, BlockedApptTimeModel, DayOfWeekHourModel } from './shared/index';
 
 @Directive({
   selector: '[rdBlockedApptTime]',
