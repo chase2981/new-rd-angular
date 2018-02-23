@@ -9,8 +9,8 @@ import { RdAngularCompilerModule } from '@rd/compiler';
 import { RdAngularBlockedApptTimeModule } from '@rd/blocked-appt-time';
 import { RdAngularDatetimeModule } from '@rd/datetime';
 import { RdAngularSmsModule } from '@rd/sms';
-import { LoadingIndicatorModule } from '@turbonemesis/angular-lib/dist/lib/loading-indicator';
-import { TextEditorModule } from '@turbonemesis/angular-lib/dist/lib/text-editor';
+// import { LoadingIndicatorModule } from '@turbonemesis/angular-lib/dist/lib/loading-indicator';
+// import { TextEditorModule } from '@turbonemesis/angular-lib/dist/lib/text-editor';
 
 import { AppComponent } from './app.component';
 import { RdCoreAuthServiceConfig } from './do_not_make_public';

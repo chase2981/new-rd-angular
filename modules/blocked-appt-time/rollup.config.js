@@ -33,8 +33,8 @@ export default {
             '@rd/forms': 'rd.forms',
             '@angular/core': 'ng.core'
         },
-        banner: '/* my-library version ' + libraryVersion + ' */',
-        footer: '/* follow me on Twitter! @rich_harris */'
+        // banner: '/* my-library version ' + libraryVersion + ' */',
+        // footer: '/* follow me on Twitter! @rich_harris */'
     },
     onwarn: function (warning) {
         var code = warning.code;

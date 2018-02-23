@@ -87,7 +87,6 @@
     "typescript": "~2.4.2"
   },
   "optionalDependencies": {
-    "@turbonemesis/angular-lib": "file:modules/angular-lib/dist",
     "@rd/core": "file:modules/core/dist",
     "@rd/common": "file:modules/common/dist",
     "@rd/datetime": "file:modules/datetime/dist",
