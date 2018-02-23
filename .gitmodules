@@ -1,0 +1,3 @@
+[submodule "modules/datetime"]
+	path = modules/datetime
+	url = https://github.com/chase2981/base-angular-lib
