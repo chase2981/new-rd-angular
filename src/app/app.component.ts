@@ -3,7 +3,7 @@ import { FileUploader } from 'ng2-file-upload';
 
 import { isFunction, CoreApiService, CoreAuthServiceConfig } from '@rd/core';
 import { CompiledResultModel, TemplateCompiler } from '@rd/compiler';
-import { TimezoneService } from '@rd/datetime';
+import { TimezoneService } from '@turbonemesis/datetime';
 
 import {RdCoreAuthServiceConfig} from './do_not_make_public';
 import { BootstrapModalComponent } from '@rd/common';
@@ -43,7 +43,7 @@ export class AppComponent implements AfterViewInit {
 
   ngOnInit(){
     console.log('@rd/sms.charCounter', this.charCounter);
-    console.log('@rd/datetime.timezoneSvc', this.timezoneSvc);
+    console.log('@turbonemesis/datetime.timezoneSvc', this.timezoneSvc);
     console.log('@rd/core.coreApiSvc', this.coreApiSvc);
     console.log('@rd/core.isFunction(fn)', isFunction(function(){}));
     this.templateCompiler.compile('/assets/auto-email-template.html', { id: 291, firstName: 'chase', lastName: 'gibbs' }, this.viewContainerRef, []).subscribe((result: CompiledResultModel) => {

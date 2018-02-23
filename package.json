@@ -26,6 +26,7 @@
     "@angular/platform-browser": "5.1.0",
     "@angular/platform-browser-dynamic": "5.1.0",
     "@angular/router": "5.1.0",
+    "@turbonemesis/datetime": "file:turbonemesis-datetime-0.0.0-development.tgz",
     "bootstrap": "3.x",
     "ckeditor": "4.7.3",
     "core-js": "2.5.2",
@@ -87,12 +88,12 @@
     "typescript": "~2.4.2"
   },
   "optionalDependencies": {
-    "@rd/core": "file:modules/core/dist",
-    "@rd/common": "file:modules/common/dist",
-    "@rd/datetime": "file:modules/datetime/dist",
-    "@rd/forms": "file:modules/forms/dist",
-    "@rd/compiler": "file:modules/compiler/dist",
     "@rd/blocked-appt-time": "file:modules/blocked-appt-time/dist",
+    "@rd/common": "file:modules/common/dist",
+    "@rd/compiler": "file:modules/compiler/dist",
+    "@rd/core": "file:modules/core/dist",
+    "@rd/datetime": "file:rd-datetime-7.0.0.tgz",
+    "@rd/forms": "file:modules/forms/dist",
     "@rd/sms": "file:modules/sms/dist"
   }
 }

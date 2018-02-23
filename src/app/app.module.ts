@@ -7,7 +7,7 @@ import { RdAngularCommonModule } from '@rd/common';
 import { RdAngularFormsModule } from '@rd/forms';
 import { RdAngularCompilerModule } from '@rd/compiler';
 import { RdAngularBlockedApptTimeModule } from '@rd/blocked-appt-time';
-import { RdAngularDatetimeModule } from '@rd/datetime';
+import { RdAngularDatetimeModule } from '@turbonemesis/datetime';
 import { RdAngularSmsModule } from '@rd/sms';
 // import { LoadingIndicatorModule } from '@turbonemesis/angular-lib/dist/lib/loading-indicator';
 // import { TextEditorModule } from '@turbonemesis/angular-lib/dist/lib/text-editor';
