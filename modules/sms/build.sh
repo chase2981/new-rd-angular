@@ -19,9 +19,8 @@ $GULP inline-templates --gulpfile $PWD/gulpfile.js
 $NGC -p $PWD/tsconfig.json
 # Make directory dist/bundles
 mkdir $PWD/dist/bundles
-# Rollup index.js into bundles/sms.umd.min.js w/sourcemaps
-$ROLLUP $PWD/dist/sms.umd.js -o $PWD/dist/sms.umd.min.js -f es -m
-
+# Rollup index.js into bundles/forms.umd.min.js w/sourcemaps
+$ROLLUP -c=rollup.config.js
 # Copy library package.json + README.md, etc. to ./dist directory
 cp $PWD/package.json $PWD/dist/package.json
 cp $PWD/README.md $PWD/dist/README.md

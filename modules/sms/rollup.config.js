@@ -4,8 +4,8 @@ import commonjs from 'rollup-plugin-commonjs';
 import uglify from 'rollup-plugin-uglify'
 //paths are relative to the execution path
 
-const fileName = 'blocked-appt-time';
-const moduleName = '@rd/blocked-appt-time';
+const fileName = 'sms';
+const moduleName = '@rd/sms';
 const moduleVersion = '7.0.0';
 
 
@@ -14,9 +14,13 @@ export default {
     external: [
         '@angular/core',
         '@angular/common',
+        '@angular/forms',
+        '@rd/common',
         '@rd/core',
+        '@rd/datetime',
         '@rd/forms',
         'moment',
+        'rxjs/Rx'
     ],
     output: {
         name: moduleName,
@@ -31,11 +35,15 @@ export default {
         globals: {
             '@angular/core': 'ng.core',
             '@angular/common': 'ng.common',
-            
+            '@angular/forms': 'ng.forms',
+
+            '@rd/common': 'rd.common',
             '@rd/core': 'rd.core',
+            '@rd/datetime': 'rd.datetime',
             '@rd/forms': 'rd.forms',
 
             'moment': 'moment',
+            'rxjs/Rx': 'rxjs.Rx'
         },
         // banner: '/* my-library version ' + libraryVersion + ' */',
         // footer: '/* follow me on Twitter! @rich_harris */'
