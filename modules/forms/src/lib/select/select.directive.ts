@@ -1,6 +1,6 @@
 import {
   Component, ChangeDetectorRef, OnInit, OnDestroy, Input, Output, ElementRef,
-  EventEmitter, Directive, HostBinding, HostListener
+  EventEmitter, Directive, HostBinding, HostListener, forwardRef
 } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { ReplaySubject } from 'rxjs/Rx';
@@ -13,10 +13,16 @@ import { Select, Option } from './shared';
 
 var count = 1;
 
+export function providers() {
+  return [
+    new NgModelInputValueAccessor(forwardRef(() => SelectDirective))
+  ];
+}
+
 @Directive({
   selector: '[rdSelect]',
   exportAs: 'rdSelect',
-  providers: [new NgModelInputValueAccessor(SelectDirective)]
+  providers: providers()
 })
 export class SelectDirective extends NgModelInput implements OnInit, Select {
   @Input() multiple?: boolean = false;
@@ -63,10 +69,3 @@ export class SelectDirective extends NgModelInput implements OnInit, Select {
     return this.open;
   }
 }
-
-
-
-
-
-
-

@@ -4,9 +4,15 @@ import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { NgModelInput, NgModelInputValueAccessor } from '../ng-model-input';
 import { ButtonGroupButtonDirective } from './button-group-button/button-group-button.directive';
 
+export function providers() {
+  return [
+    new NgModelInputValueAccessor(ButtonGroupDirective)
+  ];
+}
+
 @Directive({
     selector: 'rd-button-group',
-    providers: [new NgModelInputValueAccessor(ButtonGroupDirective)]
+    providers: providers()
 })
 export class ButtonGroupDirective extends NgModelInput implements OnInit, AfterContentInit {
     @ContentChildren(ButtonGroupButtonDirective) buttons: QueryList<ButtonGroupButtonDirective>;

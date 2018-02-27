@@ -5,11 +5,17 @@ import { NgModelInputValueAccessor } from '../../ng-model-input';
 import { ComboSelect } from '../shared/combo-select';
 import { KEYCODE, SelectOption } from '../../shared/index';
 
+export function providers() {
+  return [
+    new NgModelInputValueAccessor(ComboSelectComponent)
+  ];
+}
+
 @Component({
   selector: 'rd-combo-select',
   templateUrl: './combo-select.component.html',
   styleUrls: ['./combo-select.component.less'],
-  providers: [new NgModelInputValueAccessor(ComboSelectComponent)]
+  providers: providers()
 })
 export class ComboSelectComponent extends ComboSelect implements OnInit, OnDestroy {
   @Input() open: boolean = false;

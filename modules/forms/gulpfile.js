@@ -8,7 +8,7 @@ const exec = require('child_process').exec;
  * @see  https://github.com/ludohenin/gulp-inline-ng2-template
  */
 const INLINE_TEMPLATES = {
-  SRC: ['**/*.ts'],
+  SRC: ['src/**/*.ts', '!node_modules/**'],
   DIST: './build',
   CONFIG: {
     base: '/src',

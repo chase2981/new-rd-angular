@@ -1,7 +1,7 @@
 import { Input, Output, EventEmitter, forwardRef, ContentChildren, Component, FactoryProvider, QueryList, Type } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-const noop = () => { };
+export function noop() { };
 
 export class NgModelInputValueAccessor {
     provide: any = NG_VALUE_ACCESSOR;
@@ -44,8 +44,8 @@ export class NgModelInput implements ControlValueAccessor {
     //From ControlValueAccessor interface
     writeValue(newVal: any) {
         this.ngModel = newVal;
-        /* emit to one more avenue which is when a sibling component needs to listen to 
+        /* emit to one more avenue which is when a sibling component needs to listen to
             any and all value changes in order to do something, not just the internal ones (i.e. SelectTitleDirective) */
-        this.ngModelChange$.emit(newVal); 
+        this.ngModelChange$.emit(newVal);
     }
 }

@@ -4,7 +4,7 @@
     "outDir": "./dist",
     "baseUrl": ".",
     "rootDir": "./build",
-    "inlineSourceMap": true,
+    "sourceMap": true,
     "module": "es2015",
     "declaration": true,
     "moduleResolution": "node",
@@ -13,9 +13,11 @@
     "target": "es5",
     "skipLibCheck": false,
     "types": [
+      "bootstrap",
+      "ckeditor",
+      "fullcalendar",
       "jquery",
-      "moment",
-      "ckeditor"
+      "toastr"
     ],
     "typeRoots": [
       "node_modules/@types"
@@ -28,7 +30,7 @@
     ]
   },
   "files": [
-    "./build/forms.ts"
+    "./build/public_api.ts"
   ],
   "include": [
     "./build/**/*.d.ts"

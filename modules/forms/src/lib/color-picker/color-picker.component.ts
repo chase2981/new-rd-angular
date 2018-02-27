@@ -3,11 +3,17 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@ang
 import { NgModelInput, NgModelInputValueAccessor } from '../ng-model-input';
 import { Color } from './shared';
 
+export function providers() {
+  return [
+    new NgModelInputValueAccessor(ColorPickerComponent)
+  ];
+}
+
 @Component({
     selector: 'rd-color-picker',
     templateUrl: './color-picker.component.html',
     styleUrls: ['./color-picker.component.less'],
-    providers: [new NgModelInputValueAccessor(ColorPickerComponent)]
+    providers: providers()
 })
 export class ColorPickerComponent extends NgModelInput implements OnInit {
     @Input() open: boolean = false;
