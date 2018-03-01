@@ -2,6 +2,15 @@
   "name": "@rd/angular",
   "version": "1.0.0",
   "license": "MIT",
+  "private": false,
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "npm run build-blocked-appt-time && npm run build-common && npm run build-compiler && npm run build-core && npm run build-datetime && npm run build-forms && npm run build-sms",
     "build-blocked-appt-time": "cd modules/blocked-appt-time && bash build.sh && cd dist && npm pack && cp rd-blocked-appt-time-7.0.0.tgz ../../",
@@ -11,6 +20,7 @@
     "build-datetime": "cd modules/datetime && npm i && bash build.sh && cd dist && npm pack && cp rd-datetime-0.0.0-development.tgz ../../",
     "build-forms": "cd modules/forms && npm i && bash build.sh && cd dist && npm pack && cp rd-forms-0.0.0-development.tgz ../../",
     "build-sms": "cd modules/sms && bash build.sh && cd dist && npm pack && cp rd-sms-7.0.0.tgz ../../",
+    "commit": "git-cz",
     "e2e": "ng e2e",
     "lint": "ng lint",
     "prepush": "ng test --single-run",
@@ -20,7 +30,6 @@
     "test": "ng test --single-run",
     "test-lib": "cd modules/angular-lib && bash test.sh"
   },
-  "private": false,
   "dependencies": {
     "@angular/common": "5.1.0",
     "@angular/compiler": "5.1.0",
@@ -30,13 +39,6 @@
     "@angular/platform-browser": "5.1.0",
     "@angular/platform-browser-dynamic": "5.1.0",
     "@angular/router": "5.1.0",
-    "@rd/blocked-appt-time": "file:modules/blocked-appt-time/dist",
-    "@rd/common": "file:modules/common/dist",
-    "@rd/compiler": "file:modules/compiler/dist",
-    "@rd/core": "file:modules/core/dist",
-    "@rd/datetime": "file:modules/datetime/dist",
-    "@rd/forms": "file:modules/forms/dist",
-    "@rd/sms": "file:modules/sms/dist",
     "bootstrap": "3.x",
     "ckeditor": "4.7.3",
     "core-js": "2.5.2",
@@ -53,6 +55,13 @@
     "@angular/cli": "1.6.0",
     "@angular/compiler-cli": "5.1.0",
     "@angular/language-service": "5.1.0",
+    "@rd/blocked-appt-time": "file:modules/rd-blocked-appt-time-7.0.0.tgz",
+    "@rd/common": "file:modules/rd-common-0.0.0-development.tgz",
+    "@rd/compiler": "file:modules/rd-compiler-0.0.0-development.tgz",
+    "@rd/core": "file:modules/rd-core-0.0.0-development.tgz",
+    "@rd/datetime": "file:modules/rd-datetime-0.0.0-development.tgz",
+    "@rd/forms": "file:modules/rd-forms-0.0.0-development.tgz",
+    "@rd/sms": "file:modules/rd-sms-7.0.0.tgz",
     "@types/bootstrap": "^3.3.38",
     "@types/ckeditor": "0.0.45",
     "@types/fullcalendar": "^3.8.0",
