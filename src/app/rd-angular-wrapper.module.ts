@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { APP_BASE_HREF, CommonModule } from '@angular/common';
 import { CookieXSRFStrategy, HttpModule, Request, XSRFStrategy } from '@angular/http';
-import { RdAngularCoreModule, CoreAuthServiceConfig } from '@rd/core';
-import { RdAngularCommonModule } from '@rd/common';
+import { RdAngularCoreModule, CoreAuthServiceConfig } from '@rd/core/lib/index';
+import { RdAngularCommonModule } from '@rd/common/lib/index';
 /* key point here */
 import { RdAngularFormsModule } from '@rd/forms/lib/index';
 /* vs */
@@ -29,7 +29,7 @@ import { RdCoreAuthServiceConfig } from './config';
     RdAngularCompilerModule,
     RdAngularCoreModule,
     RdAngularCommonModule,
-    RdAngularFormsModule,
+    // RdAngularFormsModule,
     // RdAngularBlockedApptTimeModule,
     // RdAngularDatetimeModule.forRoot(),
     // RdAngularSmsModule,
