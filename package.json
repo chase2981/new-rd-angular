@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "private": false,
+  "repository": {
+    "url": "https://github.com/chase2981/new-rd-angular"
+  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
@@ -74,6 +77,7 @@
     "@types/toastr": "^2.1.35",
     "camelcase": "^4.1.0",
     "codelyzer": "4.0.1",
+    "commitizen": "^2.9.6",
     "concurrently": "^3.5.1",
     "glob": "^7.1.2",
     "gulp": "3.9.1",
