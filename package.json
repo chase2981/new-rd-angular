@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "ng build --aot true",
+    "build": "npm run build-blocked-appt-time && npm run build-common && npm run build-compiler && npm run build-core && npm run build-datetime && npm run build-forms && npm run build-sms",
     "build-blocked-appt-time": "cd modules/blocked-appt-time && bash build.sh && cd dist && npm pack && cp rd-blocked-appt-time-7.0.0.tgz ../../",
     "build-common": "cd modules/common && npm i && bash build.sh && cd dist && npm pack && cp rd-common-0.0.0-development.tgz ../../",
     "build-compiler": "cd modules/compiler && npm i && bash build.sh && cd dist && npm pack && cp rd-compiler-0.0.0-development.tgz ../../",
