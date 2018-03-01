@@ -2,18 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { CookieXSRFStrategy, HttpModule, Request, XSRFStrategy } from '@angular/http';
-import { RdAngularCoreModule, CoreAuthServiceConfig } from '@rd/core';
-import { RdAngularCommonModule } from '@rd/common';
-import { RdAngularFormsModule } from '@rd/forms';
+// import { RdAngularCoreModule, CoreAuthServiceConfig } from '@rd/core';
+// import { RdAngularCommonModule } from '@rd/common';
+// import { RdAngularFormsModule } from '@rd/forms';
 import { RdAngularCompilerModule } from '@rd/compiler';
-import { RdAngularBlockedApptTimeModule } from '@rd/blocked-appt-time';
-import { RdAngularDatetimeModule } from '@turbonemesis/datetime';
-import { RdAngularSmsModule } from '@rd/sms';
+// import { RdAngularBlockedApptTimeModule } from '@rd/blocked-appt-time';
+// import { RdAngularDatetimeModule } from '@turbonemesis/datetime';
+// import { RdAngularSmsModule } from '@rd/sms';
 // import { LoadingIndicatorModule } from '@turbonemesis/angular-lib/dist/lib/loading-indicator';
 // import { TextEditorModule } from '@turbonemesis/angular-lib/dist/lib/text-editor';
 
 import { AppComponent } from './app.component';
-import { RdCoreAuthServiceConfig } from './do_not_make_public';
+// import { RdCoreAuthServiceConfig } from './do_not_make_public';
 
 @NgModule({
   declarations: [
@@ -23,17 +23,17 @@ import { RdCoreAuthServiceConfig } from './do_not_make_public';
     BrowserModule,
     HttpModule,
     RdAngularCompilerModule,
-    RdAngularCoreModule,
-    RdAngularCommonModule,
-    RdAngularFormsModule,
-    RdAngularBlockedApptTimeModule,
-    RdAngularDatetimeModule.forRoot(),
-    RdAngularSmsModule,
+    // RdAngularCoreModule,
+    // RdAngularCommonModule,
+    // RdAngularFormsModule,
+    // RdAngularBlockedApptTimeModule,
+    // RdAngularDatetimeModule.forRoot(),
+    // RdAngularSmsModule,
     // LoadingIndicatorModule,
     // TextEditorModule,
   ],
   providers: [
-      { provide: CoreAuthServiceConfig, useClass: RdCoreAuthServiceConfig }
+    // { provide: CoreAuthServiceConfig, useClass: RdCoreAuthServiceConfig }
     // { provide: APP_BASE_HREF, useValue: '/' },
     // { provide: XSRFStrategy, useValue: cookieStrategy },
     // { provide: RequestOptions, useValue: {} }
