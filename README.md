@@ -1,67 +1,182 @@
-# angular-lib-tester
+# Material Design for Angular
+[![npm version](https://badge.fury.io/js/%40angular%2Fmaterial.svg)](https://www.npmjs.com/package/%40angular%2Fmaterial)
+[![Build Status](https://travis-ci.org/angular/material2.svg?branch=master)](https://travis-ci.org/angular/material2)
+[![Gitter](https://badges.gitter.im/angular/material2.svg)](https://gitter.im/angular/material2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-This project's purpose is to provide a convenient, quick, and easy-to-understand angular-lib structure from which you can begin to develop and test your own new ./angular-lib. 
+This is the home for the Angular team's Material Design components built for and with Angular.
 
-This project was built using @angular@5.1.0 and @angular/cli@1.6.0, both of which are strongly geared towards ahead-of-time compilation.
+#### Quick links
+[Documentation, demos, and guides][aio] |
+[Google group](https://groups.google.com/forum/#!forum/angular-material2) |
+[Contributing](https://github.com/angular/material2/blob/master/CONTRIBUTING.md) |
+[Plunker Template](https://goo.gl/uDmqyY) |
+[StackBlitz Template](https://goo.gl/wwnhMV)
 
+### Getting started
 
+See our [Getting Started Guide][getting-started]
+if you're building your first project with Angular Material.
 
-## Getting Started
-First things first, clone the repo: 
-In a new terminal, execute the following statement to clone the repo: 
-`git clone git@github.com:chase2981/angular-lib-tester.git`
+Check out our [directory of design documents](https://github.com/angular/material2/wiki/Design-doc-directory)
+for more insight into our process.
 
-Next, install the dependencies: (Don't forget to `cd ./angular-lib-tester` first..)
+If you'd like to contribute, you must follow our [contributing guidelines](https://github.com/angular/material2/blob/master/CONTRIBUTING.md).
+You can look through the issues (which should be up-to-date on who is working on which features
+and which pieces are blocked) and make a comment.
+Also see our [`help wanted`](https://github.com/angular/material2/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)
+label.
 
-Run `npm i` to install the dependencies.
-
-While those are installing, feel free to study the angular-lib-tester project's structure and how the ./angular-lib sub-project is setup in particular; afterall, building out an idealistic angular-lib starter project is what this is ALL about ;)
-
-- [angular-lib-tester](#angular-lib-tester)
-    - [Getting Started](#getting-started)
-    - [Angular-lib](#angular-lib)
-        - [Build the ./angular-lib](#build-the-angular-lib)
-        - [Test the ./angular-lib](#test-the-angular-lib)
-    - [Demo Application](#demo-application)
-        - [Serving the Demo App](#serving-the-demo-app)
-            - [1) Serve using angular-cli's built-in webpack server](#1-serve-using-angular-clis-built-in-webpack-server)
-            - [2) Serve using a combination of `ng b` and `liteserver`](#2-serve-using-a-combination-of-ng-b-and-liteserver)
-        - [Build the Demo App](#build-the-demo-app)
-        - [Test the Demo App](#test-the-demo-app)
-
-** Please Note: You DO NOT have to repeat the `npm i` step within the ./angular-lib directory itself--because its dependencies are installed along with the demo app's dependencies as peerDependencies
-
-## Angular-lib
-
-### Build the ./angular-lib
-Run `npm run build-lib`, or else, `./angular-lib/build.sh` in order to rebuild the angular-lib directory's src files into a consumable library (speedy!!!)
-
-### Test the ./angular-lib
-Run `npm run test-lib`, or else, `./angular-lib/test.sh` in order to run the tests for the angular-lib itself (super quick!!)
-
-- Please Note: If you are unable to run either of the `npm run (build|test)-lib` commands, then you may need to run `chmod 777 ./angular-lib/build.sh` and/or `chmod 777 ./angular-lib/test.sh`--in order to make each bash script executable prior to executing it
-
-## Demo Application
-
-### Serving the Demo App
-There are two ways you can serve the demo app
-
-#### 1) Serve using angular-cli's built-in webpack server
-a) Run `ng s` to serve the application using angular-cli server
-(http://localhost:4200)
-
-* Please do NOT judge based on styling ;) Please judge based on speed of developmemt + simplicity + ease-of-understanding instead!!!
-
-Running `ng s` will compile the demo application's source code, using angular-cli's built-in webpack server, and it will watch for changes to either the ./angular-lib or the demo application's ./src directory.
-
-#### 2) Serve using a combination of `ng b` and `liteserver`
-a) Compile the typescript (`ng b` or `node_modules/.bin/ngc -p ./src/tsconfig.app.json`, etc)
-b) `npm run serve` in order to serve the app using lite-server instead; (http://localhost:3000)
-
-### Build the Demo App
-Run `ng b` or `npm run build` to build the demo-app. The `npm run serve` command utilizes the build command in order to serve the demo-app content via lite-server
-
-### Test the Demo App
-Run `ng test` or `npm test` to test the demo-app
+High level stuff planned for Q1 2018 (January - March):
+* Research and prototyping for virtual-scroll
+* Research and exploration for data visualization
+* cdkTree and matTree
+* cdk/dialog
+* Switch build to bazel
+* Overlay positioning improvements
+* Research and prototyping for future Material Design updates
+* Research and prototyping drag/drop features for the CDK
 
 
+#### Available features
+
+| Feature          | Notes                                                  | Docs         |
+|------------------|--------------------------------------------------------|--------------|
+| autocomplete     |                                                        |   [Docs][24] |
+| button           |                                                        |   [Docs][1]  |
+| button-toggle    |                                                        |   [Docs][15] |
+| cards            |                                                        |   [Docs][2]  |
+| checkbox         |                                                        |   [Docs][3]  |
+| chips            |                                                        |   [Docs][26] |
+| data-table       |                           More features coming in 2018 |   [Docs][28] |
+| datepicker       |                                                        |   [Docs][25] |
+| dialog           |                                                        |   [Docs][22] |
+| divider          |                                                        |   [Docs][35] |
+| expansion-panel  |                                                        |   [Docs][32] |
+| grid-list        |                                                        |   [Docs][9]  |
+| icon             |                                                        |   [Docs][10] |
+| input            |                                                        |   [Docs][5]  |
+| list             |                               Action list planned 2018 |   [Docs][8]  |
+| menu             |                                                        |   [Docs][17] |
+| paginator        |                                                        |   [Docs][29] |
+| progress-bar     |                                                        |   [Docs][12] |
+| progress-spinner |                                                        |   [Docs][11] |
+| radio            |                                                        |   [Docs][4]  |
+| ripples          |                                                        |   [Docs][19] |
+| select           |                                                        |   [Docs][23] |
+| sidenav          |                                                        |   [Docs][6]  |
+| slide-toggle     |                                                        |   [Docs][14] |
+| slider           |                                                        |   [Docs][16] |
+| snackbar / toast |                                                        |   [Docs][21] |
+| sort-header      |                                                        |   [Docs][30] |
+| stepper          |                                                        |   [Docs][33] |
+| tabs             |                                                        |   [Docs][13] |
+| textarea         |                                                        |   [Docs][5]  |
+| toolbar          |                                                        |   [Docs][7]  |
+| tooltip          |                                                        |   [Docs][18] |
+| ---------------- | ------------------------------------------------------ | ------------ |
+| theming          |                                                        |  [Guide][20] |
+| typography       |                                                        |  [Guide][27] |
+| layout           |                      See [angular/flex-layout][lay_rp] |  [Wiki][0]   |
+| cdk              |                                                        |   [Docs][34] |
+
+
+#### In progress, planned, and non-planned features
+
+| Feature          | Status                              | Docs         | Issue          |
+|------------------|-------------------------------------|--------------|----------------|
+| tree             |      In-progress ([sneak peek][31]) |           -  |  [#3175][3175] |
+| sticky-header    |        In-progress, planned Q2 2018 |           -  |   [#474][0474] |
+| virtual-repeat   |        Prototyping, planned Q1 2018 |           -  |   [#823][0823] |
+| badge            |        In-progress, planned Q1 2018 |           -  |  [#3085][3058] |
+| fab speed-dial   |            Not started, not planned |           -  |   [#860][0860] |
+| fab toolbar      |            Not started, not planned |           -  |              - |
+| bottom-sheet     |            Not started, not planned |           -  |  [#8113][8113] |
+| bottom-nav       |            Not started, not planned |           -  |   [#408][0408] |
+
+ [0]: https://github.com/angular/flex-layout/wiki
+ [1]: https://material.angular.io/components/component/button
+ [2]: https://material.angular.io/components/component/card
+ [3]: https://material.angular.io/components/component/checkbox
+ [4]: https://material.angular.io/components/component/radio
+ [5]: https://material.angular.io/components/component/input
+ [6]: https://material.angular.io/components/component/sidenav
+ [7]: https://material.angular.io/components/component/toolbar
+ [8]: https://material.angular.io/components/component/list
+ [9]: https://material.angular.io/components/component/grid-list
+[10]: https://material.angular.io/components/component/icon
+[11]: https://material.angular.io/components/component/progress-spinner
+[12]: https://material.angular.io/components/component/progress-bar
+[13]: https://material.angular.io/components/component/tabs
+[14]: https://material.angular.io/components/component/slide-toggle
+[15]: https://material.angular.io/components/component/button-toggle
+[16]: https://material.angular.io/components/component/slider
+[17]: https://material.angular.io/components/component/menu
+[18]: https://material.angular.io/components/component/tooltip
+[19]: https://github.com/angular/material2/blob/master/src/lib/core/ripple/ripple.md
+[20]: https://material.angular.io/guide/theming
+[21]: https://material.angular.io/components/component/snack-bar
+[22]: https://material.angular.io/components/component/dialog
+[23]: https://material.angular.io/components/component/select
+[24]: https://material.angular.io/components/component/autocomplete
+[25]: https://material.angular.io/components/component/datepicker
+[26]: https://material.angular.io/components/component/chips
+[27]: https://material.angular.io/guide/typography
+[28]: https://material.angular.io/components/component/table
+[29]: https://material.angular.io/components/component/paginator
+[30]: https://material.angular.io/components/component/sort
+[31]: https://tina-material-tree.firebaseapp.com/simple-tree
+[32]: https://material.angular.io/components/expansion/overview
+[33]: https://material.angular.io/components/stepper/overview
+[34]: https://material.angular.io/cdk/categories
+[35]: https://material.angular.io/components/component/divider
+
+[0107]: https://github.com/angular/material2/issues/107
+[0119]: https://github.com/angular/material2/issues/119
+[0108]: https://github.com/angular/material2/issues/108
+[0114]: https://github.com/angular/material2/issues/114
+[0115]: https://github.com/angular/material2/issues/115
+[0118]: https://github.com/angular/material2/issues/118
+[0546]: https://github.com/angular/material2/issues/546
+[0117]: https://github.com/angular/material2/issues/117
+[0120]: https://github.com/angular/material2/issues/120
+[0123]: https://github.com/angular/material2/issues/123
+[0205]: https://github.com/angular/material2/issues/205
+[0860]: https://github.com/angular/material2/issues/860
+[0408]: https://github.com/angular/material2/issues/408
+[0508]: https://github.com/angular/material2/issues/508
+[0823]: https://github.com/angular/material2/issues/823
+[0581]: https://github.com/angular/material2/issues/581
+[3175]: https://github.com/angular/material2/issues/3175
+[4191]: https://github.com/angular/material2/pull/4191
+[0995]: https://github.com/angular/material2/pull/995
+[0474]: https://github.com/angular/material2/pull/474
+[8113]: https://github.com/angular/material2/issues/8113
+[3058]: https://github.com/angular/material2/issues/3058
+
+[aio]: https://material.angular.io
+[getting-started]: https://material.angular.io/guide/getting-started
+[lay_rp]:  https://github.com/angular/flex-layout
+
+
+## The goal of Angular Material
+Our goal is to build a set of high-quality UI components built with Angular and TypeScript,
+following the Material Design spec. These
+components will serve as an example of how to write Angular code following best practices.
+
+### What do we mean by "high-quality"?
+* Internationalized and accessible so that all users can use them.
+* Straightforward APIs that don't confuse developers.
+* Behave as expected across a wide variety of use-cases without bugs.
+* Behavior is well-tested with both unit and integration tests.
+* Customizable within the bounds of the Material Design specification.
+* Performance cost is minimized.
+* Code is clean and well-documented to serve as an example for Angular devs.
+
+## Browser and screen reader support
+Angular Material supports the most recent two versions of all major browsers:
+Chrome (including Android), Firefox, Safari (including iOS), and IE11 / Edge
+
+We also aim for great user experience with the following screen readers:
+* NVDA and JAWS with IE / FF / Chrome (on Windows).
+* VoiceOver with Safari on iOS and Safari / Chrome on OSX.
+* TalkBack with Chrome on Android.
