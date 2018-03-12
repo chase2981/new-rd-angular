@@ -47,4 +47,4 @@ import {
     MatTableModule
   ]
 })
-export class ExampleMaterialModule {}
+export class MaterialWrapperModule {}

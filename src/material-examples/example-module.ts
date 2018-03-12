@@ -4,7 +4,8 @@
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
-import {ExampleMaterialModule} from './material-module';
+import {RdAngularWrapperModule} from './rd-angular-wrapper-module';
+import {MaterialWrapperModule} from './material-wrapper-module';
 import {AutocompleteAutoActiveFirstOptionExample} from './autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example';
 import {AutocompleteDisplayExample} from './autocomplete-display/autocomplete-display-example';
 import {AutocompleteFilterExample} from './autocomplete-filter/autocomplete-filter-example';
@@ -119,6 +120,7 @@ import {TableSelectionExample} from './table-selection/table-selection-example';
 import {TableSortingExample} from './table-sorting/table-sorting-example';
 import {TabsOverviewExample} from './tabs-overview/tabs-overview-example';
 import {TabsTemplateLabelExample} from './tabs-template-label/tabs-template-label-example';
+import {TemplateCompilerOverviewExample} from './template-compiler-overview/template-compiler-overview-example';
 import {ToolbarMultirowExample} from './toolbar-multirow/toolbar-multirow-example';
 import {ToolbarOverviewExample} from './toolbar-overview/toolbar-overview-example';
 import {TooltipDelayExample} from './tooltip-delay/tooltip-delay-example';
@@ -603,6 +605,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Complex Example',
     component: TabsTemplateLabelExample
   },
+  'template-compiler-overview': {
+    title: 'Template compiler overview',
+    component: TemplateCompilerOverviewExample
+  },
   'toolbar-multirow': {
     title: 'Multi-row toolbar',
     component: ToolbarMultirowExample
@@ -748,6 +754,7 @@ export const EXAMPLE_LIST = [
   TableSortingExample,
   TabsOverviewExample,
   TabsTemplateLabelExample,
+  TemplateCompilerOverviewExample,
   ToolbarMultirowExample,
   ToolbarOverviewExample,
   TooltipDelayExample,
@@ -761,8 +768,9 @@ export const EXAMPLE_LIST = [
   declarations: EXAMPLE_LIST,
   entryComponents: EXAMPLE_LIST,
   imports: [
-    ExampleMaterialModule,
+    MaterialWrapperModule,
     FormsModule,
+    RdAngularWrapperModule,
     ReactiveFormsModule,
     CommonModule
   ]
