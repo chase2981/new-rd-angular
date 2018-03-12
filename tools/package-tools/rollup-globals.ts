@@ -49,6 +49,8 @@ export const rollupGlobals = {
   '@angular/material-moment-adapter': 'ng.materialMomentAdapter',
   '@angular/cdk': 'ng.cdk',
 
+  '@rd/compiler': 'rd.compiler',
+
   // Include secondary entry-points of the cdk and material packages
   ...rollupCdkEntryPoints,
   ...rollupMatEntryPoints,

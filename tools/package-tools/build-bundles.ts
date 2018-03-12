@@ -127,6 +127,7 @@ export class PackageBundler {
       banner: buildConfig.licenseBanner,
       format: config.format,
       dest: config.dest,
+      external: ['@rd/compiler'],
       globals: rollupGlobals,
       sourceMap: true
     };

@@ -4,8 +4,8 @@
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
-import {RdAngularWrapperModule} from './rd-angular-wrapper-module';
 import {MaterialWrapperModule} from './material-wrapper-module';
+import {RdAngularWrapperModule} from './rd-angular-wrapper-module';
 import {AutocompleteAutoActiveFirstOptionExample} from './autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example';
 import {AutocompleteDisplayExample} from './autocomplete-display/autocomplete-display-example';
 import {AutocompleteFilterExample} from './autocomplete-filter/autocomplete-filter-example';
@@ -606,7 +606,7 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     component: TabsTemplateLabelExample
   },
   'template-compiler-overview': {
-    title: 'Template compiler overview',
+    title: 'template-compiler overview',
     component: TemplateCompilerOverviewExample
   },
   'toolbar-multirow': {

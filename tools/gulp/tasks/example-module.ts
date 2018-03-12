@@ -95,7 +95,8 @@ function generateExampleNgModule(extractedMetadata: ExampleMetadata[]): string {
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
-import {ExampleMaterialModule} from './material-module';
+import {MaterialWrapperModule} from './material-wrapper-module';
+import {RdAngularWrapperModule} from './rd-angular-wrapper-module';
 ${extractedMetadata.map(r => buildImportsTemplate(r)).join('').trim()}
 
 export interface LiveExample {
@@ -117,8 +118,9 @@ export const EXAMPLE_LIST = [
   declarations: EXAMPLE_LIST,
   entryComponents: EXAMPLE_LIST,
   imports: [
-    ExampleMaterialModule,
+    MaterialWrapperModule,
     FormsModule,
+    RdAngularWrapperModule,
     ReactiveFormsModule,
     CommonModule
   ]
