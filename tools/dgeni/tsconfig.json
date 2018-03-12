@@ -12,7 +12,11 @@
     "target": "es5",
     "types": [
       "node"
-    ]
+    ],
+    "paths": {
+      "./modules/*": ["../../modules/*"],
+      "./src/modules/*": ["../../modules/*"]
+    }
   },
   "files": [
     "index.ts"

@@ -11,6 +11,7 @@ import {AutocompleteDisplayExample} from './autocomplete-display/autocomplete-di
 import {AutocompleteFilterExample} from './autocomplete-filter/autocomplete-filter-example';
 import {AutocompleteOverviewExample} from './autocomplete-overview/autocomplete-overview-example';
 import {AutocompleteSimpleExample} from './autocomplete-simple/autocomplete-simple-example';
+import {BlockedApptTimeOverviewExample} from './blocked-appt-time-overview/blocked-appt-time-overview-example';
 import {ButtonOverviewExample} from './button-overview/button-overview-example';
 import {ButtonToggleExclusiveExample} from './button-toggle-exclusive/button-toggle-exclusive-example';
 import {ButtonToggleOverviewExample} from './button-toggle-overview/button-toggle-overview-example';
@@ -156,6 +157,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'autocomplete-simple': {
     title: 'Simple autocomplete',
     component: AutocompleteSimpleExample
+  },
+  'blocked-appt-time-overview': {
+    title: 'blocked-appt-time overview',
+    component: BlockedApptTimeOverviewExample
   },
   'button-overview': {
     title: 'Basic buttons',
@@ -645,6 +650,7 @@ export const EXAMPLE_LIST = [
   AutocompleteFilterExample,
   AutocompleteOverviewExample,
   AutocompleteSimpleExample,
+  BlockedApptTimeOverviewExample,
   ButtonOverviewExample,
   ButtonToggleExclusiveExample,
   ButtonToggleOverviewExample,
