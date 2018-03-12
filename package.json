@@ -26,7 +26,6 @@
     "commit": "git-cz",
     "e2e": "ng e2e",
     "lint": "ng lint",
-    "prepush": "ng test --single-run",
     "serve": "npm run build && lite-server -c=.bs-config.json",
     "ng": "ng",
     "start": "ng serve",
