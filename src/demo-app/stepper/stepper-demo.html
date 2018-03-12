@@ -6,14 +6,12 @@
     <mat-step formGroupName="0" [stepControl]="formArray?.get([0])">
       <ng-template matStepLabel>Fill out your name</ng-template>
       <mat-form-field>
-        <mat-label>First name</mat-label>
-        <input matInput formControlName="firstNameFormCtrl" required>
+        <input matInput placeholder="First Name" formControlName="firstNameFormCtrl" required>
         <mat-error>This field is required</mat-error>
       </mat-form-field>
 
       <mat-form-field>
-        <mat-label>Last name</mat-label>
-        <input matInput formControlName="lastNameFormCtrl" required>
+        <input matInput placeholder="Last Name" formControlName="lastNameFormCtrl" required>
         <mat-error>This field is required</mat-error>
       </mat-form-field>
       <div>
@@ -26,8 +24,7 @@
         <div>Fill out your email address</div>
       </ng-template>
       <mat-form-field>
-        <mat-label>Email address</mat-label>
-        <input matInput formControlName="emailFormCtrl">
+        <input matInput placeholder="Email address" formControlName="emailFormCtrl">
         <mat-error>The input is invalid.</mat-error>
       </mat-form-field>
       <div>
@@ -53,13 +50,11 @@
     <form [formGroup]="nameFormGroup">
       <ng-template matStepLabel>Fill out your name</ng-template>
       <mat-form-field>
-        <mat-label>First name</mat-label>
-        <input matInput formControlName="firstNameCtrl" required>
+        <input matInput placeholder="First Name" formControlName="firstNameCtrl" required>
         <mat-error>This field is required</mat-error>
       </mat-form-field>
       <mat-form-field>
-        <mat-label>Last name</mat-label>
-        <input matInput formControlName="lastNameCtrl" required>
+        <input matInput placeholder="Last Name" formControlName="lastNameCtrl" required>
         <mat-error>This field is required</mat-error>
       </mat-form-field>
       <div>
@@ -72,8 +67,7 @@
     <form [formGroup]="emailFormGroup">
       <ng-template matStepLabel>Fill out your email address</ng-template>
       <mat-form-field>
-        <mat-label>Email address</mat-label>
-        <input matInput formControlName="emailCtrl">
+        <input matInput placeholder="Email address" formControlName="emailCtrl">
         <mat-error>The input is invalid</mat-error>
       </mat-form-field>
       <div>
@@ -101,13 +95,11 @@
   <mat-step [editable]="!isNonEditable">
     <ng-template matStepLabel>Fill out your name</ng-template>
     <mat-form-field>
-      <mat-label>First name</mat-label>
-      <input matInput>
+      <input matInput placeholder="First Name">
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>Last name</mat-label>
-      <input matInput>
+      <input matInput placeholder="Last Name">
     </mat-form-field>
     <div>
       <button mat-button matStepperNext>Next</button>
@@ -119,8 +111,7 @@
       <div>Fill out your phone number</div>
     </ng-template>
     <mat-form-field>
-      <mat-label>Phone number</mat-label>
-      <input matInput>
+      <input matInput placeholder="Phone number">
     </mat-form-field>
     <div>
       <button mat-button matStepperPrevious>Back</button>
@@ -133,8 +124,7 @@
       <div>Fill out your address</div>
     </ng-template>
     <mat-form-field>
-      <mat-label>Address</mat-label>
-      <input matInput>
+      <input matInput placeholder="Address">
     </mat-form-field>
     <div>
       <button mat-button matStepperPrevious>Back</button>
@@ -155,13 +145,11 @@
 <mat-horizontal-stepper>
   <mat-step label="Fill out your name">
     <mat-form-field>
-      <mat-label>First name</mat-label>
-      <input matInput>
+      <input matInput placeholder="First Name">
     </mat-form-field>
 
     <mat-form-field>
-      <mat-label>Last name</mat-label>
-      <input matInput>
+      <input matInput placeholder="Last Name">
     </mat-form-field>
     <div>
       <button mat-button matStepperNext>Next</button>
@@ -170,8 +158,7 @@
 
   <mat-step label="Fill out your phone number">
     <mat-form-field>
-      <mat-label>Phone number</mat-label>
-      <input matInput>
+      <input matInput placeholder="Phone number">
     </mat-form-field>
     <div>
       <button mat-button matStepperPrevious>Back</button>
@@ -181,8 +168,7 @@
 
   <mat-step label="Fill out your address">
     <mat-form-field>
-      <mat-label>Address</mat-label>
-      <input matInput>
+      <input matInput placeholder="Address">
     </mat-form-field>
     <div>
       <button mat-button matStepperPrevious>Back</button>
@@ -203,8 +189,7 @@
   <mat-step *ngFor="let step of steps">
     <ng-template matStepLabel>{{step.label}}</ng-template>
     <mat-form-field>
-      <mat-label>Answer</mat-label>
-      <input matInput [(ngModel)]="step.content">
+      <input matInput placeholder="Answer" [(ngModel)]="step.content">
     </mat-form-field>
     <div>
       <button mat-button matStepperPrevious>Back</button>
@@ -217,8 +202,7 @@
 <mat-horizontal-stepper>
   <mat-step label="Step 1">
     <mat-form-field>
-      <mat-label>Autosize textarea</mat-label>
-      <textarea matInput matTextareaAutosize>This is an autosize textarea, it should adjust to the size of its content.</textarea>
+      <textarea matInput placeholder="Autosize textarea" matTextareaAutosize>This is an autosize textarea, it should adjust to the size of its content.</textarea>
     </mat-form-field>
   </mat-step>
 </mat-horizontal-stepper>

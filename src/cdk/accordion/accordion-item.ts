@@ -18,7 +18,6 @@ import {
 import {UniqueSelectionDispatcher} from '@angular/cdk/collections';
 import {CdkAccordion} from './accordion';
 import {coerceBooleanProperty} from '@angular/cdk/coercion';
-import {Subscription} from 'rxjs/Subscription';
 
 /** Used to generate unique ID for each accordion item. */
 let nextId = 0;
@@ -32,8 +31,6 @@ let nextId = 0;
   exportAs: 'cdkAccordionItem',
 })
 export class CdkAccordionItem implements OnDestroy {
-  /** Subscription to openAll/closeAll events. */
-  private _openCloseAllSubscription = Subscription.EMPTY;
   /** Event emitted every time the AccordionItem is closed. */
   @Output() closed: EventEmitter<void> = new EventEmitter<void>();
   /** Event emitted every time the AccordionItem is opened. */
@@ -100,18 +97,12 @@ export class CdkAccordionItem implements OnDestroy {
           this.expanded = false;
         }
       });
-
-    // When an accordion item is hosted in an accordion, subscribe to open/close events.
-    if (this.accordion) {
-      this._openCloseAllSubscription = this._subscribeToOpenCloseAllActions();
-    }
   }
 
   /** Emits an event for the accordion item being destroyed. */
   ngOnDestroy() {
     this.destroyed.emit();
     this._removeUniqueSelectionListener();
-    this._openCloseAllSubscription.unsubscribe();
   }
 
   /** Toggles the expanded state of the accordion item. */
@@ -133,14 +124,5 @@ export class CdkAccordionItem implements OnDestroy {
     if (!this.disabled) {
       this.expanded = true;
     }
-  }
-
-  private _subscribeToOpenCloseAllActions(): Subscription {
-    return this.accordion._openCloseAllActions.subscribe(expanded => {
-      // Only change expanded state if item is enabled
-      if (!this.disabled) {
-        this.expanded = expanded;
-      }
-    });
   }
 }

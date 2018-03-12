@@ -89,8 +89,7 @@
         <br>
         <br>
         <mat-form-field>
-          <mat-label>Tab label</mat-label>
-          <input matInput [(ngModel)]="tab.label">
+          <input matInput placeholder="Tab Label" [(ngModel)]="tab.label">
         </mat-form-field>
         <br><br>
         <button mat-raised-button
@@ -142,8 +141,7 @@
       <br>
       <br>
       <mat-form-field>
-        <mat-label>Tab label</mat-label>
-        <input matInput [(ngModel)]="tab.label">
+        <input matInput placeholder="Tab Label" [(ngModel)]="tab.label">
       </mat-form-field>
     </div>
   </mat-tab>
@@ -189,8 +187,7 @@
       <br>
       <br>
       <mat-form-field>
-        <mat-label>Tab label</mat-label>
-        <input matInput [(ngModel)]="tab.label">
+        <input matInput placeholder="Tab Label" [(ngModel)]="tab.label">
       </mat-form-field>
     </div>
   </mat-tab>
@@ -220,8 +217,7 @@
       <br>
       <br>
       <mat-form-field>
-        <mat-label>Tab label</mat-label>
-        <input matInput [(ngModel)]="tab.label">
+        <input matInput placeholder="Tab Label" [(ngModel)]="tab.label">
       </mat-form-field>
     </div>
   </mat-tab>
@@ -287,26 +283,8 @@
   <mat-tab label="Tab 1">
     <div class="tab-content">
       <mat-form-field>
-        <mat-label>Autosize textarea</mat-label>
-        <textarea matInput matTextareaAutosize>This is an autosize textarea, it should adjust to the size of its content.</textarea>
+        <textarea matInput placeholder="Autosize textarea" matTextareaAutosize>This is an autosize textarea, it should adjust to the size of its content.</textarea>
       </mat-form-field>
     </div>
   </mat-tab>
-</mat-tab-group>
-
-<h1>Lazy Loaded Tabs</h1>
-<mat-tab-group>
-  <mat-tab label="First">
-    <ng-template matTabContent>
-      <counter></counter>
-    </ng-template>
-  </mat-tab>
-  <mat-tab label="Second">
-    <ng-template matTabContent>
-      <counter></counter>
-    </ng-template>
-  </mat-tab>
-  <mat-tab label="Third">
-      <counter></counter>
-  </mat-tab>  
 </mat-tab-group>

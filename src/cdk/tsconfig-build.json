@@ -22,7 +22,7 @@
     "target": "es2015",
     "lib": ["es2015", "dom"],
     "skipLibCheck": true,
-    "types": ["jasmine", "tslib"],
+    "types": [],
     "paths": {
       "@angular/cdk/*": ["../../dist/packages/cdk/*"]
     }
@@ -33,7 +33,7 @@
   ],
   "angularCompilerOptions": {
     "annotateForClosureCompiler": true,
-    "strictMetadataEmit": false, // Workaround for Angular #22210
+    "strictMetadataEmit": true,
     "flatModuleOutFile": "index.js",
     "flatModuleId": "@angular/cdk",
     "skipTemplateCodegen": true,

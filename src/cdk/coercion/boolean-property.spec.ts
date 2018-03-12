@@ -45,4 +45,5 @@ describe('coerceBooleanProperty', () => {
   it('should coerce an array to true', () => {
     expect(coerceBooleanProperty([])).toBe(true);
   });
+
 });

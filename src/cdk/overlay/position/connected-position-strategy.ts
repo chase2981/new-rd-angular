@@ -15,8 +15,6 @@ import {
   OverlayConnectionPosition,
   ConnectedOverlayPositionChange,
   ScrollingVisibility,
-  validateHorizontalPosition,
-  validateVerticalPosition,
 } from './connected-position';
 import {Subject} from 'rxjs/Subject';
 import {Subscription} from 'rxjs/Subscription';
@@ -129,7 +127,6 @@ export class ConnectedPositionStrategy implements PositionStrategy {
       return;
     }
 
-    this._validatePositions();
     this._applied = true;
 
     // We need the bounding rects for the origin and the overlay to determine how to position
@@ -183,8 +180,6 @@ export class ConnectedPositionStrategy implements PositionStrategy {
       return;
     }
 
-    this._validatePositions();
-
     const originRect = this._origin.getBoundingClientRect();
     const overlayRect = this._pane.getBoundingClientRect();
     const viewportSize = this._viewportRuler.getViewportSize();
@@ -200,9 +195,8 @@ export class ConnectedPositionStrategy implements PositionStrategy {
    * on reposition we can evaluate if it or the overlay has been clipped or outside view. Every
    * Scrollable must be an ancestor element of the strategy's origin element.
    */
-  withScrollableContainers(scrollables: CdkScrollable[]): this {
+  withScrollableContainers(scrollables: CdkScrollable[]) {
     this.scrollables = scrollables;
-    return this;
   }
 
   /**
@@ -440,27 +434,13 @@ export class ConnectedPositionStrategy implements PositionStrategy {
     this._onPositionChange.next(positionChange);
   }
 
-  /** Subtracts the amount that an element is overflowing on an axis from it's length. */
+  /**
+   * Subtracts the amount that an element is overflowing on an axis from it's length.
+   */
   private _subtractOverflows(length: number, ...overflows: number[]): number {
     return overflows.reduce((currentValue: number, currentOverflow: number) => {
       return currentValue - Math.max(currentOverflow, 0);
     }, length);
-  }
-
-  /** Validates that the current position match the expected values. */
-  private _validatePositions(): void {
-    if (!this._preferredPositions.length) {
-      throw Error('ConnectedPositionStrategy: At least one position is required.');
-    }
-
-    // TODO(crisbeto): remove these once Angular's template type
-    // checking is advanced enough to catch these cases.
-    this._preferredPositions.forEach(pair => {
-      validateHorizontalPosition('originX', pair.originX);
-      validateVerticalPosition('originY', pair.originY);
-      validateHorizontalPosition('overlayX', pair.overlayX);
-      validateVerticalPosition('overlayY', pair.overlayY);
-    });
   }
 }
 

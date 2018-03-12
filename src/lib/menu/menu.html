@@ -5,9 +5,10 @@
     (keydown)="_handleKeydown($event)"
     (click)="closed.emit('click')"
     [@transformMenu]="_panelAnimationState"
+    (@transformMenu.done)="_onAnimationDone($event)"
     tabindex="-1"
     role="menu">
-    <div class="mat-menu-content">
+    <div class="mat-menu-content" [@fadeInItems]="'showing'">
       <ng-content></ng-content>
     </div>
   </div>

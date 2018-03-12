@@ -92,8 +92,7 @@ export class DialogDemo {
   <p>It's Jazz!</p>
 
   <mat-form-field>
-    <mat-label>How much?</mat-label>
-    <input matInput #howMuch>
+    <input matInput placeholder="How much?" #howMuch>
   </mat-form-field>
 
   <p> {{ data.message }} </p>

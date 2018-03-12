@@ -13,9 +13,6 @@ import {
   style,
   transition,
   trigger,
-  query,
-  animateChild,
-  group,
 } from '@angular/animations';
 
 /**
@@ -38,11 +35,6 @@ export const matSelectAnimations: {
    * When the panel is removed from the DOM, it simply fades out linearly.
    */
   transformPanel: trigger('transformPanel', [
-    state('void', style({
-      transform: 'scaleY(0)',
-      minWidth: '100%',
-      opacity: 0
-    })),
     state('showing', style({
       opacity: 1,
       minWidth: 'calc(100% + 32px)', // 32px = 2 * 16px padding
@@ -53,10 +45,14 @@ export const matSelectAnimations: {
       minWidth: 'calc(100% + 64px)', // 64px = 48px padding on the left + 16px padding on the right
       transform: 'scaleY(1)'
     })),
-    transition('void => *', group([
-      query('@fadeInContent', animateChild()),
+    transition('void => *', [
+      style({
+        opacity: 0,
+        minWidth: '100%',
+        transform: 'scaleY(0)'
+      }),
       animate('150ms cubic-bezier(0.25, 0.8, 0.25, 1)')
-    ])),
+    ]),
     transition('* => void', [
       animate('250ms 100ms linear', style({opacity: 0}))
     ])

@@ -6,8 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
-import {MatAccordion} from '@angular/material';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -18,8 +17,6 @@ import {MatAccordion} from '@angular/material';
   preserveWhitespaces: false,
 })
 export class ExpansionDemo {
-  @ViewChild(MatAccordion) accordion: MatAccordion;
-
   displayMode: string = 'default';
   multi = false;
   hideToggle = false;

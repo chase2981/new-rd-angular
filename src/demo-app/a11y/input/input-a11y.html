@@ -1,20 +1,18 @@
 <section>
   <h2>Basic input box (e.g. name field)</h2>
   <mat-form-field floatLabel="never">
-    <mat-label>First name</mat-label>
-    <input matInput [(ngModel)]="firstName">
+    <input matInput placeholder="First name" [(ngModel)]="firstName">
   </mat-form-field>
   <mat-form-field floatLabel="never">
-    <mat-label>Last name</mat-label>
-    <input matInput [(ngModel)]="lastName">
+    <input matInput placeholder="Last name" [(ngModel)]="lastName">
   </mat-form-field>
 </section>
 
 <section>
   <h2>Input with hint (e.g. password field)</h2>
   <mat-form-field hideRequiredMarker>
-    <mat-label>Password</mat-label>
-    <input matInput [type]="passwordType" [(ngModel)]="password" required #passwordModel="ngModel">
+    <input matInput [type]="passwordType" placeholder="Password" [(ngModel)]="password" required
+           #passwordModel="ngModel">
     <button mat-icon-button matSuffix [attr.aria-label]="passwordToggleLabel"
             (click)="showPassword = !showPassword">
       <mat-icon>{{passwordToggleIcon}}</mat-icon>
@@ -27,8 +25,8 @@
 <section>
   <h2>Input with error message (e.g. email field)</h2>
   <mat-form-field>
-    <mat-label>Email</mat-label>
-    <input matInput type="email" [(ngModel)]="email" required email #emailModel="ngModel">
+    <input matInput type="email" placeholder="Email" [(ngModel)]="email" required email
+           #emailModel="ngModel">
     <mat-error *ngIf="emailModel.hasError('required')">You must enter your email.</mat-error>
     <mat-error *ngIf="emailModel.hasError('email')">Not a valid email address.</mat-error>
   </mat-form-field>
@@ -37,14 +35,12 @@
 <section>
   <h2>Input with prefix & suffix (e.g. currency converter)</h2>
   <mat-form-field floatLabel="always">
-    <mat-label>USD</mat-label>
-    <input matInput type="number" [(ngModel)]="usd">
+    <input matInput type="number" placeholder="USD" [(ngModel)]="usd">
     <span matPrefix>$</span>
   </mat-form-field>
   =
   <mat-form-field floatLabel="always">
-    <mat-label>JPY</mat-label>
-    <input matInput type="number" [(ngModel)]="jpy">
+    <input matInput type="number" placeholder="JPY" [(ngModel)]="jpy">
     <span matPrefix>‎¥‎</span>
   </mat-form-field>
   (as of 7/31/2017)

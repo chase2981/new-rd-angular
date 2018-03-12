@@ -7,8 +7,7 @@ Space above cards: <input type="number" [formControl]="topHeightCtrl">
     <div>Reactive dirty: {{ stateCtrl.dirty }}</div>
 
     <mat-form-field floatLabel="never">
-      <mat-label>State</mat-label>
-      <input matInput [matAutocomplete]="reactiveAuto" [formControl]="stateCtrl">
+      <input matInput placeholder="State" [matAutocomplete]="reactiveAuto" [formControl]="stateCtrl">
       <mat-autocomplete #reactiveAuto="matAutocomplete" [displayWith]="displayFn">
         <mat-option *ngFor="let state of reactiveStates | async" [value]="state">
           <span>{{ state.name }}</span>
@@ -34,8 +33,7 @@ Space above cards: <input type="number" [formControl]="topHeightCtrl">
 
     <!-- Added an ngIf below to test that autocomplete works with ngIf -->
     <mat-form-field *ngIf="true">
-      <mat-label>State</mat-label>
-      <input matInput [matAutocomplete]="tdAuto" [(ngModel)]="currentState"
+      <input matInput placeholder="State" [matAutocomplete]="tdAuto" [(ngModel)]="currentState"
         (ngModelChange)="tdStates = filterStates(currentState)" [disabled]="tdDisabled">
       <mat-autocomplete #tdAuto="matAutocomplete">
         <mat-option *ngFor="let state of tdStates" [value]="state.name">
@@ -58,9 +56,9 @@ Space above cards: <input type="number" [formControl]="topHeightCtrl">
     <div>Option groups (currentGroupedState): {{ currentGroupedState }}</div>
 
     <mat-form-field>
-      <mat-label>State</mat-label>
       <input
         matInput
+        placeholder="State"
         [matAutocomplete]="groupedAuto"
         [(ngModel)]="currentGroupedState"
         (ngModelChange)="filteredGroupedStates = filterStateGroups(currentGroupedState)">

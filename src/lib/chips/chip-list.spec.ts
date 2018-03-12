@@ -63,16 +63,6 @@ describe('MatChipList', () => {
       it('should add the `mat-chip-list` class', () => {
         expect(chipListNativeElement.classList).toContain('mat-chip-list');
       });
-
-      it('should not have the aria-selected attribute when is not selectable', () => {
-        testComponent.selectable = false;
-        fixture.detectChanges();
-
-        const chipsValid = chips.toArray().every(chip =>
-            !chip.selectable && !chip._elementRef.nativeElement.hasAttribute('aria-selected'));
-
-        expect(chipsValid).toBe(true);
-      });
     });
 
     describe('with selected chips', () => {
@@ -1032,7 +1022,7 @@ describe('MatChipList', () => {
 
 @Component({
   template: `
-    <mat-chip-list [tabIndex]="tabIndex" [selectable]="selectable">
+    <mat-chip-list [tabIndex]="tabIndex">
       <div *ngFor="let i of [0,1,2,3,4]">
        <div *ngIf="remove != i">
           <mat-chip (select)="chipSelect(i)" (deselect)="chipDeselect(i)">

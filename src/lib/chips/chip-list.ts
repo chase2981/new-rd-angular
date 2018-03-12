@@ -11,6 +11,7 @@ import {Directionality} from '@angular/cdk/bidi';
 import {coerceBooleanProperty} from '@angular/cdk/coercion';
 import {SelectionModel} from '@angular/cdk/collections';
 import {BACKSPACE} from '@angular/cdk/keycodes';
+import {startWith} from 'rxjs/operators/startWith';
 import {
   AfterContentInit,
   ChangeDetectionStrategy,
@@ -29,12 +30,16 @@ import {
   Self,
   ViewEncapsulation,
 } from '@angular/core';
-import {ControlValueAccessor, FormGroupDirective, NgControl, NgForm} from '@angular/forms';
-import {CanUpdateErrorState, ErrorStateMatcher, mixinErrorState} from '@angular/material/core';
+import {
+  ControlValueAccessor,
+  FormGroupDirective,
+  NgControl,
+  NgForm
+} from '@angular/forms';
+import {ErrorStateMatcher, mixinErrorState, CanUpdateErrorState} from '@angular/material/core';
 import {MatFormFieldControl} from '@angular/material/form-field';
 import {Observable} from 'rxjs/Observable';
 import {merge} from 'rxjs/observable/merge';
-import {startWith} from 'rxjs/operators/startWith';
 import {Subscription} from 'rxjs/Subscription';
 import {MatChip, MatChipEvent, MatChipSelectionChange} from './chip';
 import {MatChipInput} from './chip-input';
@@ -274,17 +279,12 @@ export class MatChipList extends _MatChipListMixinBase implements MatFormFieldCo
   @Input('aria-orientation') ariaOrientation: 'horizontal' | 'vertical' = 'horizontal';
 
   /**
-   * Whether or not this chip list is selectable. When a chip list is not selectable,
-   * the selected states for all the chips inside the chip list are always ignored.
+   * Whether or not this chip is selectable. When a chip is not selectable,
+   * its selected state is always ignored.
    */
   @Input()
   get selectable(): boolean { return this._selectable; }
-  set selectable(value: boolean) {
-    this._selectable = coerceBooleanProperty(value);
-    if (this.chips) {
-      this.chips.forEach(chip => chip.chipListSelectable = this._selectable);
-    }
-  }
+  set selectable(value: boolean) { this._selectable = coerceBooleanProperty(value); }
   protected _selectable: boolean = true;
 
   @Input()

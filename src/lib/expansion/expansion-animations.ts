@@ -7,13 +7,10 @@
  */
 import {
   animate,
-  animateChild,
-  group,
   state,
   style,
   transition,
   trigger,
-  query,
   AnimationTriggerMetadata,
 } from '@angular/animations';
 
@@ -45,10 +42,7 @@ export const matExpansionAnimations: {
     }), {
       params: {expandedHeight: '64px'}
     }),
-    transition('expanded <=> collapsed', group([
-      query('@indicatorRotate', animateChild(), {optional: true}),
-      animate(EXPANSION_PANEL_ANIMATION_TIMING),
-    ])),
+    transition('expanded <=> collapsed', animate(EXPANSION_PANEL_ANIMATION_TIMING)),
   ]),
 
   /** Animation that expands and collapses the panel content. */

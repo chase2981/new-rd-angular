@@ -13,7 +13,7 @@ const browserConfig = {
   'FirefoxDev':        { unitTest: {target: null, required: true  }},
   'IE9':               { unitTest: {target: null, required: false }},
   'IE10':              { unitTest: {target: null, required: true  }},
-  'IE11':              { unitTest: {target: null, required: false  }},
+  'IE11':              { unitTest: {target: 'SL', required: true  }},
   'Edge':              { unitTest: {target: 'SL', required: true  }},
   'Android4.1':        { unitTest: {target: null, required: false }},
   'Android4.2':        { unitTest: {target: null, required: false }},

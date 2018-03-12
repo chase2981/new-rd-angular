@@ -48,7 +48,7 @@ export class OverlayConfig {
   maxHeight?: number | string;
 
   /** The direction of the text in the overlay panel. */
-  direction?: Direction;
+  direction?: Direction = 'ltr';
 
   constructor(config?: OverlayConfig) {
     if (config) {

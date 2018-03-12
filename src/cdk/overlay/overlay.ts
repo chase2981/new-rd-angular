@@ -22,7 +22,6 @@ import {OverlayKeyboardDispatcher} from './keyboard/overlay-keyboard-dispatcher'
 import {OverlayContainer} from './overlay-container';
 import {ScrollStrategyOptions} from './scroll/index';
 import {DOCUMENT} from '@angular/common';
-import {Directionality} from '@angular/cdk/bidi';
 
 
 /** Next overlay unique ID. */
@@ -48,8 +47,7 @@ export class Overlay {
               private _appRef: ApplicationRef,
               private _injector: Injector,
               private _ngZone: NgZone,
-              @Inject(DOCUMENT) private _document: any,
-              private _directionality: Directionality) { }
+              @Inject(DOCUMENT) private _document: any) { }
 
   /**
    * Creates an overlay.
@@ -59,14 +57,11 @@ export class Overlay {
   create(config?: OverlayConfig): OverlayRef {
     const pane = this._createPaneElement();
     const portalOutlet = this._createPortalOutlet(pane);
-    const overlayConfig = new OverlayConfig(config);
-
-    overlayConfig.direction = overlayConfig.direction || this._directionality.value;
 
     return new OverlayRef(
       portalOutlet,
       pane,
-      overlayConfig,
+      new OverlayConfig(config),
       this._ngZone,
       this._keyboardDispatcher,
       this._document

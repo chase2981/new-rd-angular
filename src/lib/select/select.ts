@@ -308,9 +308,6 @@ export class MatSelect extends _MatSelectMixinBase implements AfterContentInit, 
     },
   ];
 
-  /** Whether the component is disabling centering of the active option over the trigger. */
-  private _disableOptionCentering: boolean = false;
-
   /** Whether the select is focused. */
   focused: boolean = false;
 
@@ -363,13 +360,6 @@ export class MatSelect extends _MatSelectMixinBase implements AfterContentInit, 
     }
 
     this._multiple = coerceBooleanProperty(value);
-  }
-
-  /** Whether to center the active option over the trigger. */
-  @Input()
-  get disableOptionCentering(): boolean { return this._disableOptionCentering; }
-  set disableOptionCentering(value: boolean) {
-    this._disableOptionCentering = coerceBooleanProperty(value);
   }
 
   /**
@@ -1127,11 +1117,6 @@ export class MatSelect extends _MatSelectMixinBase implements AfterContentInit, 
     const optionHeightAdjustment = (itemHeight - this._triggerRect.height) / 2;
     const maxOptionsDisplayed = Math.floor(SELECT_PANEL_MAX_HEIGHT / itemHeight);
     let optionOffsetFromPanelTop: number;
-
-    // Disable offset if requested by user by returning 0 as value to offset
-    if (this._disableOptionCentering) {
-      return 0;
-    }
 
     if (this._scrollTop === 0) {
       optionOffsetFromPanelTop = selectedIndex * itemHeight;

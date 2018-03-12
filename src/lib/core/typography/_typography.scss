@@ -5,15 +5,13 @@
   $font-size,
   $line-height: $font-size,
   $font-weight: 400,
-  $font-family: null,
-  $letter-spacing: null) {
+  $font-family: null) {
 
   @return (
     font-size: $font-size,
     line-height: $line-height,
     font-weight: $font-weight,
-    font-family: $font-family,
-    letter-spacing: $letter-spacing
+    font-family: $font-family
   );
 }
 
