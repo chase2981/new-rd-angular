@@ -1,0 +1,27 @@
+{
+  "name": "@rd/blocked-appt-time",
+  "version": "7.0.0",
+  "main": "bundles/blocked-appt-time.umd.min.js",
+  "typings": "blocked-appt-time.d.ts",
+  "author": {
+    "name": "rd"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@rd/core": ">= 6.0.0",
+    "@rd/forms": ">= 4.0.0",
+    "@angular/core": ">= 5.0.0",
+    "@angular/common": ">= 5.0.0",
+    "@angular/forms": ">= 5.0.0",
+    "moment": "2.x",
+    "moment-range": "3.x",
+    "moment-timezone": "0.x"
+  },
+  "engines": {
+    "node": ">=8.9.4",
+    "npm": ">=5.6.0"
+  },
+  "scripts": {},
+  "directories": {},
+  "readme": "README.md"
+}
