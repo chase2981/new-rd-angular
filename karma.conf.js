@@ -11,6 +11,7 @@ module.exports = function (config) {
       require('karma-phantomjs-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
+      require('karma-junit-reporter'),
       require('@angular/cli/plugins/karma')
     ],
     files: [
@@ -27,7 +28,7 @@ module.exports = function (config) {
     angularCli: {
       environment: 'dev'
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'coverage-istanbul', 'junit'],
     concurrency: Infinity,
     port: 9876,
     colors: true,
