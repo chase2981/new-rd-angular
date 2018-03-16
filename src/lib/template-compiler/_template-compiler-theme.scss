@@ -1,0 +1,27 @@
+@import '../core/theming/theming';
+
+@mixin mat-template-compiler-theme($theme) {
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  .mat-template-compiler-panel {
+    background: mat-color($background, card);
+    color: mat-color($foreground, text);
+
+    // Selected options in template-compilers should not be gray, but we
+    // only want to override the background for selected options if
+    // they are *not* in hover or focus state. This change has to be
+    // made here because base option styles are shared between the
+    // template-compiler and the select.
+    .mat-option.mat-selected:not(.mat-active):not(:hover) {
+      background: mat-color($background, card);
+
+      &:not(.mat-option-disabled) {
+        color: mat-color($foreground, text);
+      }
+    }
+  }
+
+}
+
+@mixin mat-template-compiler-typography($config) { }

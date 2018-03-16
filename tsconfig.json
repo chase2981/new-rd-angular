@@ -1,33 +1,31 @@
+// TypeScript config file that matches all source files in the project. This file is read by
+// IDEs and TSLint. For IDEs it ensures that `experimentalDecorator` warnings are not showing up.
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
+    "outDir": "./dist/packages/all",
     "experimentalDecorators": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
     "skipLibCheck": true,
-    "target": "es5",
-    "types": [
-      "ckeditor"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ]
+    "target": "es2015",
+    "lib": ["es5", "es2015", "dom"],
+    "types": ["jasmine"]
   },
-  "files": [
-    "./src/main.ts",
-    "./src/polyfills.ts"
-  ],
   "include": [
-    "./src/typings.d.ts"
+    "src/**/*.ts",
+    "tools/**/*.ts"
   ],
   "exclude": [
-    "node_modules/**"
+    // Exclude files that depend on Node APIs because those depend on the Node types and therefore
+    // cause ambiguous imports. For example `setTimeout()` will return a Timer instead of a number.
+    "./src/universal-app/prerender.ts",
+
+    // IDEs should not type-check the different node_modules directories of the different packages.
+    // This would cause the IDEs to be slower and also linters would check the node_modules.
+    "node_modules/",
+    "tools/dashboard/node_modules/",
+    "tools/screenshot-test/node_modules/"
   ]
 }
