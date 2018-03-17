@@ -8,6 +8,8 @@ set -e
 
 cd "$(dirname $0)/../../"
 
+# export MATERIAL2_DOCS_CONTENT_TOKEN="my value"  
+
 if [ -z ${MATERIAL2_DOCS_CONTENT_TOKEN} ]; then
   echo "Error: No access token for GitHub could be found." \
        "Please set the environment variable 'MATERIAL2_DOCS_CONTENT_TOKEN'."

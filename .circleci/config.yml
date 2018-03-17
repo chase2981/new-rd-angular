@@ -33,8 +33,10 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: yarn docs
-      - run: yarn material-examples:build-release
+      - run: bash ./scripts/deploy/publish-docs-content.sh
+
+      # - run: yarn docs
+      # - run: yarn material-examples:build-release
 
       # # run tests!
       # - run: yarn test
