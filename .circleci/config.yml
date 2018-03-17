@@ -52,5 +52,5 @@ jobs:
           name: yarn semantic-release
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              yarn semantic-release
+              yarn semantic-release || true
             fi

@@ -26,6 +26,7 @@
     // This would cause the IDEs to be slower and also linters would check the node_modules.
     "node_modules/",
     "tools/dashboard/node_modules/",
-    "tools/screenshot-test/node_modules/"
+    "tools/screenshot-test/node_modules/",
+    "reference/"
   ]
 }

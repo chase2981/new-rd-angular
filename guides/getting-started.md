@@ -1,7 +1,7 @@
 For help getting started with a new Angular app, check out the
 [Angular CLI](https://cli.angular.io/).
 
-For existing apps, follow these steps to begin using Rent Dynamics software.
+For existing apps, follow these steps to begin using Angular Material.
 
 ### Step 1: Install Angular Material and Angular CDK
 
