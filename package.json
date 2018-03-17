@@ -24,6 +24,8 @@
     "build-forms": "cd modules/forms && npm i && bash build.sh && cd dist && npm pack && cp rd-forms-0.0.0-development.tgz ../../",
     "build-sms": "cd modules/sms && bash build.sh && cd dist && npm pack && cp rd-sms-7.0.0.tgz ../../",
     "commit": "git-cz",
+    "docs": "gulp docs",
+    "material-examples:build-release": "gulp material-examples:build-release",
     "e2e": "ng e2e",
     "lint": "ng lint",
     "serve": "npm run build && lite-server -c=.bs-config.json",
