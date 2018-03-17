@@ -27,9 +27,7 @@
     "e2e": "ng e2e",
     "lint": "ng lint",
     "serve": "npm run build && lite-server -c=.bs-config.json",
-    "ng": "ng",
-    "start": "ng serve",
-    "test": "ng test --single-run",
+    "test": "karma start karma.conf.js --single-run",
     "test-lib": "cd modules/angular-lib && bash test.sh",
     "postinstall": "ngc -p angular.tsconfig.json"
   },

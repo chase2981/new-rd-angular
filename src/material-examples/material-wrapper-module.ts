@@ -44,7 +44,8 @@ import {
     MatTooltipModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule,
   ]
 })
 export class MaterialWrapperModule {}
