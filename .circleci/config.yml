@@ -33,24 +33,27 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: yarn test
-      - store_artifacts:
-          path: dist/reports/coverage
-      - store_artifacts:
-          path: dist/reports/junit
-      - store_test_results:
-          path: dist/reports/junit
+      - run: gulp docs
+      - run: gulp material-examples:build-release
+      
+      # # run tests!
+      # - run: yarn test
+      # - store_artifacts:
+      #     path: dist/reports/coverage
+      # - store_artifacts:
+      #     path: dist/reports/junit
+      # - store_test_results:
+      #     path: dist/reports/junit
 
-      - deploy:
-          name: yarn build
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              yarn build
-            fi
-      - deploy:
-          name: yarn semantic-release
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              yarn semantic-release || true
-            fi
+      # - deploy:
+      #     name: yarn build
+      #     command: |
+      #       if [ "${CIRCLE_BRANCH}" == "master" ]; then
+      #         yarn build
+      #       fi
+      # - deploy:
+      #     name: yarn semantic-release
+      #     command: |
+      #       if [ "${CIRCLE_BRANCH}" == "master" ]; then
+      #         yarn semantic-release || true
+      #       fi
