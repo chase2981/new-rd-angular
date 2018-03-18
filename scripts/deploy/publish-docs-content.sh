@@ -8,13 +8,11 @@ set -e
 
 cd "$(dirname $0)/../../"
 
-# https://user:pass@example.com
+# export GIT_CREDENTIALS = "https://chase2981:password@github.com"
 
-export MATERIAL2_DOCS_CONTENT_TOKEN="e9b65edc1cd5467520453c2e0b9428ac19037888"
-
-if [ -z ${MATERIAL2_DOCS_CONTENT_TOKEN} ]; then
+if [ -z ${GIT_CREDENTIALS} ]; then
   echo "Error: No access token for GitHub could be found." \
-       "Please set the environment variable 'MATERIAL2_DOCS_CONTENT_TOKEN'."
+       "Please set the environment variable 'GIT_CREDENTIALS'."
   exit 1
 fi
 
@@ -120,9 +118,9 @@ git config user.name "$commitAuthorName"
 git config user.email "$commitAuthorEmail"
 git config credential.helper "store --file=.git/credentials"
 
-echo "https://${commitAuthorName}:${MATERIAL2_DOCS_CONTENT_TOKEN}@github.com" > .git/credentials
+echo "${GIT_CREDENTIALS}" > .git/credentials
 
-echo "Credentials for docs-content repository are now set up. Publishing.."
+echo "Credentials for docs-content repository are now set up for [$commitAuthorName]. Publishing.."
 
 git add -A
 git commit --allow-empty -m "${buildCommitMessage}"
