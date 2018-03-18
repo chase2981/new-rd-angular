@@ -118,8 +118,8 @@ git config user.name "$commitAuthorName"
 git config user.email "$commitAuthorEmail"
 git config credential.helper "store --file=.git/credentials"
 
-echo "${GIT_CREDENTIALS}" > .git/credentials
-# echo "https://${MATERIAL2_DOCS_CONTENT_TOKEN}:@github.com" > .git/credentials
+# echo "${GIT_CREDENTIALS}" > .git/credentials
+echo "https://${MATERIAL2_DOCS_CONTENT_TOKEN}:@github.com" > .git/credentials
 
 echo "Credentials for docs-content repository are now set up for [$commitAuthorName]. Publishing.."
 
