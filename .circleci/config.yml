@@ -33,15 +33,19 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: bash ./scripts/deploy/publish-docs-content.sh
+      # gulp docs && gulp material-examples:build-release (still need to figure
+      # out github auth tokens in order for real deployment)
+      - run: yarn docs
+      - run: yarn material-examples:build-release
+      - run: bash ./scripts/deploy/publish-docs-content.sh --no-build || true
 
       # - run: yarn docs
       # - run: yarn material-examples:build-release
 
       # # run tests!
       # - run: yarn test
-      # - store_artifacts:
-      #     path: dist/reports/coverage
+      - store_artifacts:
+           path: dist/
       # - store_artifacts:
       #     path: dist/reports/junit
       # - store_test_results:
