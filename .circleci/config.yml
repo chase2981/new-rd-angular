@@ -17,6 +17,7 @@ jobs:
     working_directory: ~/new-rd-angular
 
     steps:
+      - checkout
       - run:
           # Decrypt the git_deploy_key.enc key into /tmp/git_deploy_key
           - openssl aes-256-cbc -d -K $REPO_ENC_KEY -iv $REPO_ENC_IV -in git_deploy_key.enc -out /tmp/git_deploy_key
@@ -28,8 +29,6 @@ jobs:
           - eval "$(ssh-agent -s)"
           # Add the key to the authentication agent
           - DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
-
-      - checkout
 
       # Download and cache dependencies
       - restore_cache:
