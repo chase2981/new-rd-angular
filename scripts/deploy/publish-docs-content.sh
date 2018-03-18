@@ -123,7 +123,7 @@ echo "https://${MATERIAL2_DOCS_CONTENT_TOKEN}:@github.com" > .git/credentials
 
 echo "Credentials for docs-content repository are now set up for [$commitAuthorName]. Publishing.."
 
-git remote add origin-pages https://e9b65edc1cd5467520453c2e0b9428ac19037888@github.com/chase2981/new-rd-angular-docs.git # > /dev/null 2>&1
+git remote add origin https://e9b65edc1cd5467520453c2e0b9428ac19037888@github.com/chase2981/new-rd-angular-docs.git # > /dev/null 2>&1
 # git push --quiet --set-upstream origin-pages gh-pages
 git add -A
 git commit --allow-empty -m "${buildCommitMessage}"
