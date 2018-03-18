@@ -18,17 +18,18 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          # Decrypt the git_deploy_key.enc key into /tmp/git_deploy_key
-          - openssl aes-256-cbc -d -K $REPO_ENC_KEY -iv $REPO_ENC_IV -in git_deploy_key.enc -out /tmp/git_deploy_key
-          # Make sure only the current user can read the private key
-          - chmod 600 /tmp/git_deploy_key
-          # Create a script to return the passphrase environment variable to ssh-add
-          - echo 'echo ${SSH_PASSPHRASE}' > /tmp/askpass && chmod +x /tmp/askpass
-          # Start the authentication agent
-          - eval "$(ssh-agent -s)"
-          # Add the key to the authentication agent
-          - DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
+
+      # - run:
+      #     # Decrypt the git_deploy_key.enc key into /tmp/git_deploy_key
+      #     - openssl aes-256-cbc -d -K $REPO_ENC_KEY -iv $REPO_ENC_IV -in git_deploy_key.enc -out /tmp/git_deploy_key
+      #     # Make sure only the current user can read the private key
+      #     - chmod 600 /tmp/git_deploy_key
+      #     # Create a script to return the passphrase environment variable to ssh-add
+      #     - echo 'echo ${SSH_PASSPHRASE}' > /tmp/askpass && chmod +x /tmp/askpass
+      #     # Start the authentication agent
+      #     - eval "$(ssh-agent -s)"
+      #     # Add the key to the authentication agent
+      #     - DISPLAY=":0.0" SSH_ASKPASS="/tmp/askpass" setsid ssh-add /tmp/git_deploy_key </dev/null
 
       # Download and cache dependencies
       - restore_cache:
@@ -48,6 +49,9 @@ jobs:
       # out github auth tokens in order for real deployment)
       - run: yarn docs
       - run: yarn material-examples:build-release
+      - add_ssh_keys:
+        fingerprints:
+          - "db:13:51:64:f1:9a:a8:96:c4:88:10:91:73:75:61:d7"
       - run: bash ./scripts/deploy/publish-docs-content.sh --no-build || true
 
       # - run: yarn docs
