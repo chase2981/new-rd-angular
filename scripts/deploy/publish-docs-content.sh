@@ -10,7 +10,7 @@ cd "$(dirname $0)/../../"
 
 # https://user:pass@example.com
 
-export MATERIAL2_DOCS_CONTENT_TOKEN="9a4f784f99a4b7af1cf8a4730a53ebafb669f198"
+export MATERIAL2_DOCS_CONTENT_TOKEN="25:02:eb:be:46:fe:85:c9:2e:b2:82:30:ac:6a:66:37"
 
 if [ -z ${MATERIAL2_DOCS_CONTENT_TOKEN} ]; then
   echo "Error: No access token for GitHub could be found." \
