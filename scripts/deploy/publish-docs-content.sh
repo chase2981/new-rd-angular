@@ -114,8 +114,8 @@ if [[ $(git ls-remote origin "refs/tags/${buildTagName}") ]]; then
 fi
 
 # Setup the Git configuration
-git config user.name "$commitAuthorName"
-git config user.email "$commitAuthorEmail"
+git config user.name "chase2981"
+git config user.email "chase@rentdynamics.com"
 git config credential.helper "store --file=.git/credentials"
 
 # echo "${GIT_CREDENTIALS}" > .git/credentials
@@ -123,8 +123,9 @@ echo "https://${MATERIAL2_DOCS_CONTENT_TOKEN}:@github.com" > .git/credentials
 
 echo "Credentials for docs-content repository are now set up for [$commitAuthorName]. Publishing.."
 
-git remote add origin https://e9b65edc1cd5467520453c2e0b9428ac19037888@github.com/chase2981/new-rd-angular-docs.git # > /dev/null 2>&1
+# git remote add origin https://e9b65edc1cd5467520453c2e0b9428ac19037888@github.com/chase2981/new-rd-angular-docs.git # > /dev/null 2>&1
 # git push --quiet --set-upstream origin-pages gh-pages
+
 git add -A
 git commit --allow-empty -m "${buildCommitMessage}"
 git tag "${buildTagName}"
