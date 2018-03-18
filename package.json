@@ -31,7 +31,8 @@
     "serve": "npm run build && lite-server -c=.bs-config.json",
     "test": "karma start karma.conf.js --single-run",
     "test-lib": "cd modules/angular-lib && bash test.sh",
-    "postinstall": "ngc -p angular.tsconfig.json"
+    "postinstall": "ngc -p angular.tsconfig.json",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@angular/animations": "^5.2.3",
@@ -176,7 +177,8 @@
     "tsutils": "^2.6.0",
     "typescript": "~2.5.3",
     "uglify-js": "^2.8.14",
-    "web-animations-js": "^2.2.5"
+    "web-animations-js": "^2.2.5",
+    "semantic-release": "^15.1.2"
   },
   "optionalDependencies": {}
 }

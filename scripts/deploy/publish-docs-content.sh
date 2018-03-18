@@ -10,11 +10,11 @@ cd "$(dirname $0)/../../"
 
 # export GIT_CREDENTIALS = "https://chase2981:password@github.com"
 # https://${GH_TOKEN}@github.com/<user_name>/<repo_name>.git
-if [ -z ${GIT_CREDENTIALS} ]; then
-  echo "Error: No access token for GitHub could be found." \
-       "Please set the environment variable 'GIT_CREDENTIALS'."
-  exit 1
-fi
+# if [ -z ${GIT_CREDENTIALS} ]; then
+#   echo "Error: No access token for GitHub could be found." \
+#        "Please set the environment variable 'GIT_CREDENTIALS'."
+#   exit 1
+# fi
 
 if [[ ! ${*} == *--no-build* ]]; then
   $(npm bin)/gulp material-examples:build-release:clean
@@ -116,10 +116,10 @@ fi
 # Setup the Git configuration
 git config user.name "chase2981"
 git config user.email "chase@rentdynamics.com"
-git config credential.helper "store --file=.git/credentials"
+# git config credential.helper "store --file=.git/credentials"
 
 # echo "${GIT_CREDENTIALS}" > .git/credentials
-echo "https://${MATERIAL2_DOCS_CONTENT_TOKEN}:@github.com" > .git/credentials
+# echo "https://${MATERIAL2_DOCS_CONTENT_TOKEN}:@github.com" > .git/credentials
 
 echo "Credentials for docs-content repository are now set up for [$commitAuthorName]. Publishing.."
 
