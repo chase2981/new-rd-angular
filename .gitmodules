@@ -6,10 +6,10 @@
 	url = https://github.com/RentDynamics/ng-common
 [submodule "modules/core"]
 	path = modules/core
-	url = https://github.com/RentDynamics/ng-core
+	url = https://github.com/RentDynamics/ng-core/tree/master
 [submodule "modules/compiler"]
 	path = modules/compiler
-	url = https://github.com/RentDynamics/ng-compiler
+	url = https://github.com/RentDynamics/ng-compiler/tree/master
 [submodule "modules/datetime"]
 	path = modules/datetime
 	url = https://github.com/chase2981/base-angular-lib
