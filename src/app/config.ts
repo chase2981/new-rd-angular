@@ -12,7 +12,7 @@ export class RdCoreAuthServiceConfig implements CoreAuthServiceConfig {
   userId: string = '';
 
   constructor() {
-    this.authToken = sessionStorage.getItem('rdUserAuthToken');
+    this.authToken = sessionStorage.getItem('rdUserAuthToken') || '';
   }
 
   get host() {

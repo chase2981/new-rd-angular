@@ -1,21 +1,27 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/app",
+    "outDir": "../out-tsc/spec",
     "baseUrl": "./",
-    "module": "es2015",
+    "module": "commonjs",
+    "target": "es5",
     "types": [
+      "jasmine",
       "jquery",
       "bootstrap",
       "ckeditor",
       "fullcalendar",
       "jssha",
       "moment-range",
-      "toastr"
+      "toastr",
+      "node"
     ]
   },
-  "exclude": [
-    "test.ts",
-    "**/*.spec.ts"
+  "files": [
+    "test.ts"
+  ],
+  "include": [
+    "**/*.spec.ts",
+    "**/*.d.ts"
   ]
 }

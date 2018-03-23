@@ -1,28 +1,27 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "outDir": "../out-tsc/spec",
+    "outDir": "../out-tsc/app",
     "baseUrl": "./",
-    "module": "commonjs",
-    "target": "es5",
+    "module": "es2015",
     "types": [
-      "jasmine",
       "jquery",
       "bootstrap",
       "ckeditor",
       "fullcalendar",
       "jssha",
       "moment-range",
-      "toastr",
-      "node"
+      "toastr"
     ]
   },
-  "files": [
-    "test.ts"
+  "files":[
+    "main.ts"
   ],
   "include": [
-    "../angular-lib/index.ts",
-    "**/*.spec.ts",
-    "**/*.d.ts"
+    "polyfills.ts"
+  ],
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
   ]
 }
