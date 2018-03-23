@@ -59,6 +59,7 @@
   },
   "devDependencies": {
     "@angular/bazel": "^5.2.3",
+    "@angular/cli": "^1.7.3",
     "@angular/compiler-cli": "^5.2.3",
     "@angular/platform-server": "^5.2.3",
     "@angular/upgrade": "^5.0.1",
@@ -168,6 +169,7 @@
     "run-sequence": "^1.2.2",
     "scss-bundle": "^2.0.1-beta.7",
     "selenium-webdriver": "^3.6.0",
+    "semantic-release": "^15.1.2",
     "sorcery": "^0.10.0",
     "stylelint": "^8.4.0",
     "systemjs-builder": "^0.16.12",
@@ -177,8 +179,7 @@
     "tsutils": "^2.6.0",
     "typescript": "~2.5.3",
     "uglify-js": "^2.8.14",
-    "web-animations-js": "^2.2.5",
-    "semantic-release": "^15.1.2"
+    "web-animations-js": "^2.2.5"
   },
   "optionalDependencies": {}
 }

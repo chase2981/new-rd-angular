@@ -38,7 +38,8 @@ export class AppComponent implements AfterViewInit {
 
   constructor(
     // private coreApiSvc: CoreApiService, private timezoneSvc: TimezoneService,
-    private templateCompiler: TemplateCompiler, private viewContainerRef: ViewContainerRef){
+    // private templateCompiler: TemplateCompiler, private viewContainerRef: ViewContainerRef
+  ){
 
   }
 
@@ -47,16 +48,16 @@ export class AppComponent implements AfterViewInit {
     // console.log('@turbonemesis/datetime.timezoneSvc', this.timezoneSvc);
     // console.log('@rd/core.coreApiSvc', this.coreApiSvc);
     // console.log('@rd/core.isFunction(fn)', isFunction(function(){}));
-    this.templateCompiler.compile('/assets/auto-email-template.html', { id: 291, firstName: 'chase', lastName: 'gibbs' }, this.viewContainerRef, []).subscribe((result: CompiledResultModel) => {
-      console.log('@rd/compiler.compiledResult', result);
-    });
+    // this.templateCompiler.compile('/assets/auto-email-template.html', { id: 291, firstName: 'chase', lastName: 'gibbs' }, this.viewContainerRef, []).subscribe((result: CompiledResultModel) => {
+    //   console.log('@rd/compiler.compiledResult', result);
+    // });
   }
 
   ngAfterViewInit(){
     // console.log('@rd/common.photosModal', this.photosModal);
   }
 
-  onChange(event){
+  onChange(){
     // console.log('@rd/forms.rdInputThrottle', event);
   }
 

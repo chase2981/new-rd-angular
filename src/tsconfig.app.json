@@ -14,6 +14,12 @@
       "toastr"
     ]
   },
+  "files":[
+    "main.ts"
+  ],
+  "include": [
+    "polyfills.ts"
+  ],
   "exclude": [
     "test.ts",
     "**/*.spec.ts"
