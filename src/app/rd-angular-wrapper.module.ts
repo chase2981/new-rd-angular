@@ -29,7 +29,7 @@ import { RdCoreAuthServiceConfig } from './config';
     RdAngularCompilerModule,
     RdAngularCoreModule,
     RdAngularCommonModule,
-    // RdAngularFormsModule,
+    RdAngularFormsModule,
     // RdAngularBlockedApptTimeModule,
     // RdAngularDatetimeModule.forRoot(),
     // RdAngularSmsModule,

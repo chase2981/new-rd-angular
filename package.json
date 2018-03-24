@@ -65,7 +65,7 @@
     "@rd/compiler": "file:modules/rd-compiler-0.0.0-development.tgz",
     "@rd/core": "file:modules/rd-core-0.0.0-development.tgz",
     "@rd/datetime": "file:modules/rd-datetime-0.0.0-development.tgz",
-    "@rd/forms": "file:modules/rd-forms-0.0.0-development.tgz",
+    "@rd/forms": "file:modules/forms/dist",
     "@rd/sms": "file:modules/rd-sms-7.0.0.tgz",
     "@types/bootstrap": "^3.3.38",
     "@types/ckeditor": "0.0.45",
