@@ -22,6 +22,18 @@ export class AppComponent implements AfterViewInit {
   // @ViewChild('charCounter') charCounter: CharacterCounterDirective;
   // @ViewChild('photosModal') photosModal: BootstrapModalComponent;
 
+  communities = [{
+    id: 1,
+    name: 'Arroyo Vista'
+  },{
+    id: 20,
+    name: 'Falls at Riverwoods'
+  }];
+  communityGroup = {
+    id: 1,
+    name: 'Arroyo Vista'
+  };
+  fileRelationType: any;
   // modalOptions = {
   //   show: true
   // };
@@ -57,7 +69,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   onChange(event){
-    // console.log('@rd/forms.rdInputThrottle', event);
+    console.log('change!!', event);
   }
 
   onUploadSuccess(event){

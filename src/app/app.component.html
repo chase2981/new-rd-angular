@@ -23,6 +23,21 @@
     </h2>
   </li>
 </ul>
+
+<rd-bootstrap-select [select]="select" defaultTitle="{{communityGroup?.name}} (Group)"
+  rdSelect #select="rdSelect" [ngModel]="fileRelationType" 
+  (change)="onChange($event)" rdBlur (blur)="select.open = false">
+  <rd-bootstrap-dropdown-menu rdSelectDropdown [select]="select">
+    <li rdOption #groupOption="rdOption" [select]="select"
+      title="{{communityGroup?.name}} (Group)" [value]="{ communityGroup: communityGroup?.id }" [class.active]="groupOption.isActive()">
+      <a><span>{{communityGroup?.name}} (Group)</span></a>
+    </li>
+    <li *ngFor="let community of communities" rdOption #communityOption="rdOption" [select]="select"
+      [title]="community?.name" [value]="{ community: community?.id }" [class.active]="communityOption.isActive()">
+      <a><span>{{community?.name}}</span></a>
+    </li>
+  </rd-bootstrap-dropdown-menu>
+</rd-bootstrap-select>
 <!--
 <div>
   <rd-loading-indicator></rd-loading-indicator>
