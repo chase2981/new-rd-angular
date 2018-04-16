@@ -51,7 +51,7 @@ import {fromEvent} from 'rxjs/observable/fromEvent';
 import {merge} from 'rxjs/observable/merge';
 import {of as observableOf} from 'rxjs/observable/of';
 import {Subscription} from 'rxjs/Subscription';
-import {MatAutocomplete} from './template-compiler';
+import {MatAutocomplete} from './compiler';
 
 
 /**

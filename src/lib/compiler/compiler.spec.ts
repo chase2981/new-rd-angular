@@ -48,7 +48,7 @@ import {
   MatAutocompleteTrigger,
   MAT_AUTOCOMPLETE_SCROLL_STRATEGY,
   MAT_AUTOCOMPLETE_DEFAULT_OPTIONS,
-} from './index';
+} from '../autocomplete/index';
 
 
 describe('MatAutocomplete', () => {

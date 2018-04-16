@@ -10,14 +10,14 @@ export class State {
 }
 
 /**
- * @title template-compiler overview
+ * @title compiler overview
  */
 @Component({
-  selector: 'template-compiler-overview-example',
-  templateUrl: 'template-compiler-overview-example.html',
-  styleUrls: ['template-compiler-overview-example.css']
+  selector: 'compiler-overview-example',
+  templateUrl: 'compiler-overview-example.html',
+  styleUrls: ['compiler-overview-example.css']
 })
-export class TemplateCompilerOverviewExample {
+export class CompilerOverviewExample {
   stateCtrl: FormControl;
   filteredStates: Observable<any[]>;
 

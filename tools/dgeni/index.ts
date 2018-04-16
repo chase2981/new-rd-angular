@@ -112,7 +112,7 @@ apiDocsPackage.config((readTypeScriptModules: ReadTypeScriptModules, tsParser: T
   });
 
   materialPackages.forEach(packageName => {
-    typescriptPathMap[`@angular/material/${packageName}`] = [`./lib/${packageName}/index.ts`];
+    typescriptPathMap[`@rd/${packageName}`] = [`./lib/${packageName}/index.ts`];
   });
 
   // Add proper path mappings to the TSParser service of Dgeni. This ensures that properties

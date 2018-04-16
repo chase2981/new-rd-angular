@@ -24,6 +24,7 @@ import {CheckboxOverviewExample} from './checkbox-overview/checkbox-overview-exa
 import {ChipsInputExample} from './chips-input/chips-input-example';
 import {ChipsOverviewExample} from './chips-overview/chips-overview-example';
 import {ChipsStackedExample} from './chips-stacked/chips-stacked-example';
+import {CompilerOverviewExample} from './compiler-overview/compiler-overview-example';
 import {DatepickerApiExample} from './datepicker-api/datepicker-api-example';
 import {DatepickerCustomIconExample} from './datepicker-custom-icon/datepicker-custom-icon-example';
 import {DatepickerDisabledExample} from './datepicker-disabled/datepicker-disabled-example';
@@ -121,7 +122,6 @@ import {TableSelectionExample} from './table-selection/table-selection-example';
 import {TableSortingExample} from './table-sorting/table-sorting-example';
 import {TabsOverviewExample} from './tabs-overview/tabs-overview-example';
 import {TabsTemplateLabelExample} from './tabs-template-label/tabs-template-label-example';
-import {TemplateCompilerOverviewExample} from './template-compiler-overview/template-compiler-overview-example';
 import {ToolbarMultirowExample} from './toolbar-multirow/toolbar-multirow-example';
 import {ToolbarOverviewExample} from './toolbar-overview/toolbar-overview-example';
 import {TooltipDelayExample} from './tooltip-delay/tooltip-delay-example';
@@ -209,6 +209,10 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
   'chips-stacked': {
     title: 'Stacked chips',
     component: ChipsStackedExample
+  },
+  'compiler-overview': {
+    title: 'compiler overview',
+    component: CompilerOverviewExample
   },
   'datepicker-api': {
     title: 'Datepicker open method',
@@ -610,10 +614,6 @@ export const EXAMPLE_COMPONENTS: {[key: string]: LiveExample} = {
     title: 'Complex Example',
     component: TabsTemplateLabelExample
   },
-  'template-compiler-overview': {
-    title: 'template-compiler overview',
-    component: TemplateCompilerOverviewExample
-  },
   'toolbar-multirow': {
     title: 'Multi-row toolbar',
     component: ToolbarMultirowExample
@@ -663,6 +663,7 @@ export const EXAMPLE_LIST = [
   ChipsInputExample,
   ChipsOverviewExample,
   ChipsStackedExample,
+  CompilerOverviewExample,
   DatepickerApiExample,
   DatepickerCustomIconExample,
   DatepickerDisabledExample,
@@ -760,7 +761,6 @@ export const EXAMPLE_LIST = [
   TableSortingExample,
   TabsOverviewExample,
   TabsTemplateLabelExample,
-  TemplateCompilerOverviewExample,
   ToolbarMultirowExample,
   ToolbarOverviewExample,
   TooltipDelayExample,
